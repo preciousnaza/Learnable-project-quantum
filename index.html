@@ -11,15 +11,15 @@
       <div class="bg-img transform">
         <img src="/assets/bg-imgs.png" alt="background image of movie flyers" />
       </div>
-      <section class="hero-section">
+      <section class="hero-section" id="hero">
         <div class="logo">
           <img src="/assets/logo.svg" alt="logo" />
           <p>your world of entertainment, anytime, anywhere</p>
         </div>
-        <button class="login-btn scale">Login</button>
-        <div class="scale">
+        <button class="login-btn signIn" id="login-btn">Login</button>
+        <div class="">
           <p class="sign-link">
-            Don’t have an account? <a href="#" class="sign-up-btn"> Sign up </a>
+            Don’t have an account? <a href="" class="sign-up-btn"> Sign up </a>
           </p>
           <p class="terms">
             By creating an account or sign in, you agree our Terms, Service &
@@ -27,12 +27,22 @@
           </p>
         </div>
       </section>
-      <form action="" class="form">
+
+      <form action="" id="formSignIn">
         <h3>Welcome Back!</h3>
         <input type="text" placeholder="Enter your Email here" />
-        <input type="text" placeholder="Enter your Password here" />
-        <button class="login-btn">Login</button>
-        <p>Don’t have an account?<a href="#"></a> Sign up</p>
+        <input type="text" placeholder="Enter your Password here"  class="pswd"/>
+        <button class="login-btn" id="logIn">Login</button>
+        <p>Don’t have an account? <a href="" class="sign-up-btn">Sign up</a> </p>
+      </form>
+
+
+      <form action="" id="formSignUp">
+        <h3>Let's you get started</h3>
+        <input type="text" placeholder="Enter your Email here" />
+        <input type="text" placeholder="Enter your Password here"  class="pswd"/>
+        <button class="login-btn">Sign up</button>
+        <p>Don’t have an account? <a href="" class="signIn">Sign in</a> </p>
       </form>
     </main>
     <span class="blur-bg transform">

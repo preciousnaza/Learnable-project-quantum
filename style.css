@@ -15,7 +15,11 @@
     var(--primary-black),
     var(--dark-blue)
   );
-  --bg-img: url("bg-imgs.svg");
+  --bg-gradient-top: linear-gradient(
+    35deg,
+    var(--primary-black) 50%,
+    var(--dark-blue)
+  );
 }
 * {
   margin: 0;
@@ -33,7 +37,7 @@ body {
   background-position: top;
   min-height: 100vh;
   width: 100vw;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 main {
   display: flex;
@@ -42,6 +46,8 @@ main {
   align-items: center;
   color: var(--primary-white);
   height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 .hide {
   display: none;
@@ -95,6 +101,7 @@ main {
   border-radius: 0.5rem;
   padding: 0.5rem 1.5rem;
   margin-bottom: 2rem;
+  z-index: 10 !important;
 }
 .sign-link {
   padding: 2rem;
@@ -110,6 +117,7 @@ main {
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: -1;
   transform: translateY(100%);
   opacity: 0.5;
   transition: 1.75s all ease-in;
@@ -123,9 +131,56 @@ main {
   transform: scale(0.75);
   opacity: 0;
 }
+form {
+  background: var(--bg-gradient-top);
+  border: 2px solid var(--light-blue);
+  border-radius: 1rem;
+  padding: .5rem 1rem 2rem;
+  margin: 0 1.5rem 0;
+  text-align: center;
+  color: var(--light-gray);
+  max-width: 30rem;
+  position: absolute;
+  bottom: 0;
+  transition: all .75s ease-in;
+  transform: translateY(100%);  
+  opacity: 0;
+}
+form h3 {
+  font-size: 1rem;
+  margin: 1.7rem 0 1.5rem;
+}
+form input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 0.5rem;
+  color: var(--primary-white);
+  outline: transparent;
+  background: transparent;
+}
+input::placeholder {
+  font-style: italic;
+}
+.pswd {
+  margin: 1rem 0 1.5rem;
+}
+form a {
+  text-decoration: none;
+  color: var(--light-blue);
+}
+.transform {
+  z-index: -10;
+}
+
 .control {
   transform: translateY(0%) scale(1);
   opacity: 1;
   z-index: -1;
   pointer-events: none;
+}
+.show {
+  transform: translateY(0%);
+  opacity: 1;
+  z-index: 1;
 }
