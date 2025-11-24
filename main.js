@@ -6,6 +6,7 @@ const className = (cls)=> document.getElementsByClassName(cls);
 const searchBtn = document.querySelector('.bi-search')
 const searchLine = document.querySelector('.line')
 const searchInput = document.querySelector('.search-input')
+const navLinks = document.querySelectorAll('.nav-link')
 
 // FOR THE ENGAGING MOVES IN THE UI
 const moveSections = qa(".transform");
@@ -31,8 +32,19 @@ scales.forEach((move) => {
 });
 
 //search icon animation
-searchBtn.addEventListener('click', function(){
+if(searchBtn){
+    searchBtn.addEventListener('click', function(){
     searchLine.classList.toggle('hidden')
     searchInput.classList.toggle('hidden')
     searchBtn.style.animation = 'search-scale 2s forwards ease'
+})
+}
+
+
+
+//NAVBAR LINK
+navLinks.forEach(navLink =>{
+    if(navLink.href === window.location.href){
+        navLink.classList.add("active")
+    }
 })

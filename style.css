@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css");
+
 :root {
   --primary-black: #0a0a0a;
 
@@ -256,6 +258,10 @@ header{
   margin: 0 auto;
   margin-top: 10px;
   cursor: pointer;
+  transition: transform 2s ease;
+}
+.header-paly:hover{
+  transform: scale(0.9);
 }
 .header-paly .bi{
   font-size: 16px;
@@ -306,6 +312,10 @@ header{
   place-items: center;
   margin-inline: 15px;
   margin-block: 20px;
+  transition: transform 1s ease;
+}
+.recommended-img img:hover{
+  transform: scale(0.9);
 }
 
 .navbar{
@@ -325,11 +335,26 @@ header{
   height: 45px;
   padding: 10px;
 }
-.navbar span{
-  font-size: 14px;
+.navbar span a{
+     font-size: 14px;
   color: var(--primary-white);
   font-weight: 700;
 }
+.navbar span a:hover{
+  color: #989494;
+}
+.navbar .nav-link.active{
+  background-color:var(--primary-blue) ;
+  box-shadow: inset -6px -6px 12px var(--light-blue),
+  inset 6px 6px 12px var(--primary-blue);
+  padding: 5px;
+  border-radius: 8px;
+  width: 35px;
+  height: 30px;
+}
+
+
+
 /* profile page styles */
 
 .profileP{
