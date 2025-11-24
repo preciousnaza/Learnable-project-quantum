@@ -95,6 +95,7 @@ main {
   border-radius: 0.5rem;
   padding: 0.5rem 1.5rem;
   margin-bottom: 2rem;
+  text-decoration: none;
 }
 .sign-link {
   padding: 2rem;
@@ -128,4 +129,121 @@ main {
   opacity: 1;
   z-index: -1;
   pointer-events: none;
+}
+
+/* profile page styles */
+
+.profileP{
+ margin-top: 50px;
+ margin-bottom: 5px;
+  height: 22px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.profile-img{
+ text-align: center;
+  
+   margin-top: 40px;
+}
+.profile-img1{
+  width: 181px;
+   height: 181px;
+   border-radius: 100px;  
+    border: 2px solid var(--light-gray);
+   
+}
+
+.Username{
+  margin-top: 10px;
+}
+
+.User-details{
+  height: 167px;
+  width: 395px;
+  background: rgb(5, 5, 46);
+  margin-top: 36px;
+}
+
+.logout{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 50px;
+  font-size: 10px;
+}
+
+
+/* Movie details page styles*/
+
+.arrow{
+  margin-top: 30px;
+  margin-left: 15px;
+
+}
+.watching{
+  height: 335px;
+  width: 198px;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.movie-poster{
+  border-radius: 8px;
+  height: 247px;
+  width: 150px;
+  padding: auto;
+  align-items: center;
+}
+
+.movie-title{
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  height: 24px;
+  margin-top: 10px;
+}
+
+.release-year{
+  text-align: center;
+  margin-top: 5px;
+}
+
+.movie-genres{
+  display: flex;
+  flex-direction: row;
+  gap: 21px;
+  color: var(--medium-gray);
+  font-size: 10px;
+  margin-top: 18px;
+}
+
+.synopsis{
+  margin-top: 30px;
+  height:180px;
+  width: 299px;
+  font-size: 8px;
+}
+.synopsis > h1{
+  margin-bottom: 3px;
+  font-size: 10px;
+}
+
+.details-btn{
+  display: flex;
+  flex-direction: row;
+  gap: 26px;
+}
+
+.watch-later-btn{
+border: 1px solid var(--light-gray);
+border-radius: 8px;
+height: 40px;
+width: 126px;
+ padding: 0.5rem 1rem;
+text-decoration: none;
+color: var(--primary-white);
+font-size: 12px;
+
 }
