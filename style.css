@@ -97,6 +97,10 @@ main {
   font-weight: 200;
   color: var(--light-gray);
 }
+.login-btn a{
+  text-decoration: none;
+   color: var(--primary-white);
+}
 .login-btn {
   background: var(--primary-blue);
   color: var(--primary-white);
@@ -191,16 +195,31 @@ form a {
 }
 
 /* home page */
-header {
-  background: url(assets/movie-box.jpg) no-repeat;
-  height: 300px;
-  object-fit: contain;
+.hPhd-image{
+  position: relative;
+  height: 320px;
+}
+
+.hPhd-image{
+  position: relative;
+}
+
+.slider-section{
+  display: flex;
+  overflow-x: scroll;
+}
+.slider{
+  position: relative;
+  height: 320px;
 }
 
 .header-head {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
-  padding-top: 15px;
   padding-inline: 10px;
   color: var(--primary-white);
   font-weight: 400;
@@ -286,7 +305,10 @@ header {
 }
 
 .header-main {
-  margin-top: 120px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
   color: var(--primary-white);
 }
@@ -296,12 +318,16 @@ header {
   line-height: 120%;
 }
 .header-main .list span {
-  margin-right: 21px;
+  margin-right: 10px;
   font-size: 10px;
   font-weight: 500;
   line-height: 120%;
 }
 .header-paly {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -317,7 +343,7 @@ header {
   transition: transform 2s ease;
 }
 .header-paly:hover {
-  transform: scale(0.9);
+  transform: scale();
 }
 .header-paly .bi {
   font-size: 16px;
