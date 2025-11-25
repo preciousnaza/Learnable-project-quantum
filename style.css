@@ -547,3 +547,59 @@ form a {
   color: var(--primary-white);
   font-size: 12px;
 }
+
+
+/* Watch later page styles */
+
+.watch-list{
+  display: flex;
+  flex-direction: row;
+  width: 375px;
+  height: 75px;
+  gap: 10px;
+  margin-top: 3px;
+  padding-left: 18px;
+  padding-right: 10px;
+  color: var(--light-gray);
+  
+
+  background: #000033;
+}
+.col{
+  flex: 1;
+}
+.poster{
+padding-top: 5px;
+}
+.title{
+  padding-top: 20px;
+  flex: 3;
+  justify-content: center;
+  align-items: center;
+}
+.play-btn{
+  
+  padding-top: 25px;
+  padding-left: 50px;
+
+}
+.watchP{
+  width: 375px;
+  margin-top: 30px;
+  height: 22px;
+  font-size: 22px;
+  font-weight: 400;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.time-p{
+  font-size: 10px;
+  color: #FCFCFC;
+}
+.titleP{
+  font-size: 18px;
+}
+.bg{
+  
+  background: var(--bg-gradient);
+}
