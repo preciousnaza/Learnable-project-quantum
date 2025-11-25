@@ -3,11 +3,6 @@ const qa = (s) => document.querySelectorAll(s);
 const id = (id) => document.getElementById(id);
 const className = (cls) => document.getElementsByClassName(cls);
 
-const searchBtn = document.querySelector(".ti-search");
-const searchLine = document.querySelector(".line");
-const searchInput = document.querySelector(".search-input");
-const navLinks = document.querySelectorAll(".nav-link");
-
 // FOR THE ENGAGING MOVES IN THE UI
 const moveSections = qa(".transform");
 const scales = qa(".scale");
@@ -53,8 +48,13 @@ function showPassword(e) {
     passwordInput.type = "password";
   }
 }
-pswdSignIn.addEventListener("click", showPassword);
-pswdSignUp.addEventListener("click", showPassword);
+if(pswdSignIn){
+  pswdInputSignIn.addEventListener("click", showPassword);
+}
+if(pswdInputSignUp){
+  pswdSignUp.addEventListener("click", showPassword);
+}
+
 
 // FOR THE ENGAGING MOVES IN THE UI
 const observer = new IntersectionObserver((entries) => {
@@ -69,6 +69,9 @@ moveSections.forEach((move) => {
 });
 
 //search icon animation
+const searchBtn = document.querySelector(".ti-search");
+const searchLine = document.querySelector(".line");
+const searchInput = document.querySelector(".search-input");
 if (searchBtn) {
   searchBtn.addEventListener("click", function () {
     searchLine.classList.toggle("hidden");
@@ -77,9 +80,17 @@ if (searchBtn) {
   });
 }
 
+
 //NAVBAR LINK
+const navLinks = document.querySelectorAll(".nav-link");
 navLinks.forEach((navLink) => {
   if (navLink.href === window.location.href) {
     navLink.classList.add("active");
   }
 });
+
+//homepage animation
+let hpImageAn = document.querySelectorAll('.')
+let imageDot = document.querySelectorAll('')
+
+
