@@ -65,14 +65,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 moveSections.forEach((move) => {
-  setTimeout(() => {
     observer.observe(move);
-  }, 3000);
-});
-scales.forEach((move) => {
-  setTimeout(() => {
-    observer.observe(move);
-  }, 5000);
 });
 
 //search icon animation
