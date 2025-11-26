@@ -1,3 +1,46 @@
+const sliderSection = document.querySelector('.slider-section');
+const slides = document.querySelectorAll('.slider');
+const dots = document.querySelectorAll('.dot span');
+
+let index = 0;
+const totalSlides = slides.length;
+
+// Update slide & dot
+function showSlide(i) {
+  sliderSection.scrollTo({
+    left: slides[i].offsetLeft,
+    behavior: "smooth"
+  });
+
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[i].classList.add('active');
+}
+
+// Auto slide every 3 seconds
+function startAutoSlide() {
+  setInterval(() => {
+    index = (index + 1) % totalSlides;
+    showSlide(index);
+  }, 3000);
+}
+
+// Dot click event
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    index = i;
+    showSlide(index);
+  });
+});
+
+// Initialize
+showSlide(index);
+startAutoSlide();
+
+
+
+
+
+
 const q = (s) => document.querySelector(s);
 const qa = (s) => document.querySelectorAll(s);
 const id = (id) => document.getElementById(id);
@@ -88,9 +131,4 @@ navLinks.forEach((navLink) => {
     navLink.classList.add("active");
   }
 });
-
-//homepage animation
-let hpImageAn = document.querySelectorAll('.')
-let imageDot = document.querySelectorAll('')
-
 
