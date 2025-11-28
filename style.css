@@ -197,9 +197,6 @@ main{
  .span-mv{
   position: relative;
  }
-
-
-
  .span-mv p{
   width: 100%;
   position: absolute;
@@ -214,7 +211,7 @@ main{
   backdrop-filter: blur(50px);
  }
 
-footer{
+.home-footer{
   color: var(--primary-white);
   margin-block-end: 10px;
   display: flex;
@@ -273,7 +270,6 @@ footer{
 }
 
 /* Movie details page styles*/
-
 .arrow {
   margin-top: 30px;
   margin-left: 15px;
@@ -285,7 +281,6 @@ footer{
   align-items: center;
   padding: 16px;
 }
-
 .movie-poster {
   border-radius: 8px;
   height: 247px;
@@ -293,7 +288,6 @@ footer{
   padding: auto;
   align-items: center;
 }
-
 .movie-title {
   font-size: 20px;
   font-weight: 700;
@@ -301,12 +295,10 @@ footer{
   height: 24px;
   margin-top: 10px;
 }
-
 .release-year {
   text-align: center;
   margin-top: 5px;
 }
-
 .movie-genres {
   display: flex;
   flex-direction: row;
@@ -315,7 +307,6 @@ footer{
   font-size: 10px;
   margin-top: 18px;
 }
-
 .synopsis {
   margin-top: 30px;
   height: 180px;
@@ -326,13 +317,11 @@ footer{
   margin-bottom: 3px;
   font-size: 10px;
 }
-
 .details-btn {
   display: flex;
   flex-direction: row;
   gap: 26px;
 }
-
 .watch-later-btn {
   border: 1px solid var(--light-gray);
   border-radius: 8px;
@@ -344,9 +333,7 @@ footer{
   font-size: 12px;
 }
 
-
 /* Watch later page styles */
-
 .watch-list{
   display: flex;
   flex-direction: row;
@@ -357,8 +344,6 @@ footer{
   padding-left: 18px;
   padding-right: 10px;
   color: var(--light-gray);
-  
-
   background: #000033;
 }
 .col{
@@ -374,10 +359,8 @@ padding-top: 5px;
   align-items: center;
 }
 .play-btn{
-  
   padding-top: 25px;
   padding-left: 50px;
-
 }
 .watchP{
   width: 375px;
@@ -396,18 +379,31 @@ padding-top: 5px;
   font-size: 18px;
 }
 .bg{
-  
   background: var(--bg-gradient);
 }
 
-
 /* START OF SEARCH STYLES */
 .search-container {
-  max-width: 480px;
+  width: 100%;
+  min-height: 100vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.185);
+  backdrop-filter: blur(1rem);
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 100;
+  opacity: 1;
+  transition:all 0.5s ease;
+}
+.dropSearch{
+  opacity: 1;
+  z-index: 100;
+  min-height: 100vh;
 }
 .search-header {
   display: flex;
@@ -415,12 +411,13 @@ padding-top: 5px;
   justify-content: center;
   gap: 10px;
 }
-.logo img{
+.search-logo img{
   width: 8rem;
 }
-.search-header .logo{
+.search-header .search-logo{
+  background: var(--primary-black);
+  padding: 1rem;
   text-align: center;
-  margin-top: 1.5rem;
 }
 .search-group{
   position: relative;
@@ -449,53 +446,54 @@ padding-top: 5px;
   top: 50%;
   transform: translateY(-50%);
 }
-.result-found{
+.search-result-found{
   display: block;
   color: var(--light-gray);
   font-size: 0.8rem;
   text-align: center;
 }
-.play-btn {
+.search-play-btn {
   background: transparent;
   border: none;
   cursor: pointer;
   margin-left: auto;
 }
-.play-btn img {
+.search-play-btn img {
   width: 2rem;
   height: 2rem;
 }
-.result {
+.search-result {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: .8rem;
   padding: .4rem 1rem;
   background: var(--dark-blue);
   color: var(--primary-white);
   border-bottom: 1px solid var(--primary-white);
 }
-.thumb {
+.search-thumb {
   width: 4rem;
   height: 5.5rem;
   border-radius: .7rem;
   overflow: hidden;
 }
-.thumb img {
+.search-thumb img {
   max-inline-size: 100%;
   block-size: auto;
 }
-.meta {
+.search-meta {
     display: flex;
     flex-direction: column;
     gap: .5rem;
     justify-content: flex-start;
   font-size: 1rem;
 }
-.duration {
+.search-duration {
   font-size: 0.8rem;
 }
-.msg{
+.search-msg{
   text-align: center;
   color: rgba(255, 0, 0, 0.637);
   max-height: 0;
@@ -507,7 +505,7 @@ padding-top: 5px;
   max-height: 2rem;
   opacity: 1;
 }
-footer {
+.search-footer {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -517,10 +515,10 @@ footer {
   text-align: center;
   color: var(--light-gray);
 }
-footer .logo {
+.search-footer .logo {
   margin-bottom: 0.5rem;
 }
-footer p {
+.search-footer p {
   padding-inline: 4.5rem;
   font-size: 0.8rem;
   line-height: 1.2;
