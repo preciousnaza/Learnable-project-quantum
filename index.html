@@ -8,13 +8,13 @@
   </head>
   <body>
     <header class="home-hd">
-      <nav class="logo-section">
+      <nav class="nav-menu">
         <a href="index.html" class="logo">
           <img src="assets/Quantum-logo-white.png" alt="Logo" />
         </a>
-        <div class="nav-section">
-          <span class="first-icon"> <i class="bi bi-list"></i></span>
-          <span><i class="bi bi-search"></i></span>
+        <div class="nav-icons">
+          <i class="bi bi-list"></i>
+          <i class="bi bi-search" id="searchIcon"></i>
         </div>
       </nav>
 
@@ -105,18 +105,18 @@
       </div>
     </header>
     <!-- FOR THE SEARCH PAGE -->
-    <section class="search-container">
+    <section class="search-container" id="searchPage">
       <header class="search-header">
         <div class="search-logo">
           <img src="/assets/Quantum-logo-white.png" alt="Quantum Logo" />
         </div>
         <div class="search-group">
-          <input type="text" value="Mickey" class="search-input" />
+          <input type="text" value="Mickey" class="search-input" id="searchInput" />
           <button class="search-icon">
             <img src="/assets/search.svg" alt="Search Icon" />
           </button>
         </div>
-        <span class="search-result-found">1 of 1 Result</span>
+        <span class="search-result-found" id="searchResult">1 of 1 Result</span>
       </header>
 
       <div class="search-result">
@@ -127,11 +127,11 @@
           <span>Mickey 17 (2025)</span>
           <span class="search-duration">2hrs</span>
         </div>
-        <button class="search-play-btn">
+        <button class="search-play-btn" id="searchPlay">
           <img src="/assets/play-circle.png" alt="" />
         </button>
       </div>
-      <span class="search-msg">Not Available</span>
+      <span class="search-msg"></span>
 
       <footer class="search-footer">
         <div class=" serach-logo">

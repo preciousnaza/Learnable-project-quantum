@@ -44,19 +44,16 @@ i{
 }
 
 /* home page */
-.logo-section{
+.nav-menu{
   display: flex;
   justify-content: space-between;
-  margin-inline: 15px;
-  margin-block: 10px;
+  padding: 1rem;
 }
-
-.logo-section .bi{
+.nav-icons{
+  display: flex;
+  gap: 1rem;
   color: var(--primary-white);
-}
-
-.first-icon{
-    margin-right: 5px;
+  font-size: 1.5rem;
 }
 
 .hPhd-image{
@@ -385,7 +382,7 @@ padding-top: 5px;
 /* START OF SEARCH STYLES */
 .search-container {
   width: 100%;
-  min-height: 100vh;
+  min-height: 0;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -395,14 +392,14 @@ padding-top: 5px;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: -10;
   overflow: hidden;
-  z-index: 100;
-  opacity: 1;
+  opacity: 0;
   transition:all 0.5s ease;
 }
-.dropSearch{
+.show-search{
   opacity: 1;
-  z-index: 100;
+  z-index: 10;
   min-height: 100vh;
 }
 .search-header {
@@ -495,13 +492,13 @@ padding-top: 5px;
 }
 .search-msg{
   text-align: center;
-  color: rgba(255, 0, 0, 0.637);
+  color: var(--light-gray);
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: all 1.75s ease;
+  transition: all .75s ease;
 }
-.err{
+.search-msgError{
   max-height: 2rem;
   opacity: 1;
 }
