@@ -399,3 +399,130 @@ padding-top: 5px;
   
   background: var(--bg-gradient);
 }
+
+
+/* START OF SEARCH STYLES */
+.search-container {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.search-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.logo img{
+  width: 8rem;
+}
+.search-header .logo{
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.search-group{
+  position: relative;
+  width: min(70%, 400px);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.search-input {
+  width: 100%;
+  padding: .8rem;
+  border-radius: .9rem;
+  border: 2px solid var(--medium-gray);
+  outline: transparent;
+  background: var(--primary-black);
+  color: var(--medium-gray);
+}
+.search-input:focus{
+  color: var(--light-gray);
+}
+.search-icon{
+  position: absolute;
+  background: transparent;
+  border: none;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.result-found{
+  display: block;
+  color: var(--light-gray);
+  font-size: 0.8rem;
+  text-align: center;
+}
+.play-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+.play-btn img {
+  width: 2rem;
+  height: 2rem;
+}
+.result {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  padding: .4rem 1rem;
+  background: var(--dark-blue);
+  color: var(--primary-white);
+  border-bottom: 1px solid var(--primary-white);
+}
+.thumb {
+  width: 4rem;
+  height: 5.5rem;
+  border-radius: .7rem;
+  overflow: hidden;
+}
+.thumb img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+.meta {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: flex-start;
+  font-size: 1rem;
+}
+.duration {
+  font-size: 0.8rem;
+}
+.msg{
+  text-align: center;
+  color: rgba(255, 0, 0, 0.637);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 1.75s ease;
+}
+.err{
+  max-height: 2rem;
+  opacity: 1;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-black);
+  text-align: center;
+  color: var(--light-gray);
+}
+footer .logo {
+  margin-bottom: 0.5rem;
+}
+footer p {
+  padding-inline: 4.5rem;
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+/* END OF SEARCH STYLES */
