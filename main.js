@@ -1,6 +1,6 @@
-const sliderSection = document.querySelector('.slider-section');
-const slides = document.querySelectorAll('.slider');
-const dots = document.querySelectorAll('.dot span');
+const sliderSection = document.querySelector(".slider-section");
+const slides = document.querySelectorAll(".slider");
+const dots = document.querySelectorAll(".dot span");
 
 let index = 0;
 const totalSlides = slides.length;
@@ -9,11 +9,11 @@ const totalSlides = slides.length;
 function showSlide(i) {
   sliderSection.scrollTo({
     left: slides[i].offsetLeft,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[i].classList.add('active');
+  dots.forEach((dot) => dot.classList.remove("active"));
+  dots[i].classList.add("active");
 }
 
 // Auto slide every 3 seconds
@@ -26,7 +26,7 @@ function startAutoSlide() {
 
 // Dot click event
 dots.forEach((dot, i) => {
-  dot.addEventListener('click', () => {
+  dot.addEventListener("click", () => {
     index = i;
     showSlide(index);
   });
@@ -36,17 +36,12 @@ dots.forEach((dot, i) => {
 showSlide(index);
 startAutoSlide();
 
-
-
-
-
-
 const q = (s) => document.querySelector(s);
 const qa = (s) => document.querySelectorAll(s);
 const id = (id) => document.getElementById(id);
 const className = (cls) => document.getElementsByClassName(cls);
 
-// FOR THE ENGAGING MOVES IN THE UI
+// VARIABLES NAMING
 const moveSections = qa(".transform");
 const scales = qa(".scale");
 const logBtns = qa(".signIn");
@@ -91,13 +86,12 @@ function showPassword(e) {
     passwordInput.type = "password";
   }
 }
-if(pswdSignIn){
+if (pswdSignIn) {
   pswdInputSignIn.addEventListener("click", showPassword);
 }
-if(pswdInputSignUp){
+if (pswdInputSignUp) {
   pswdSignUp.addEventListener("click", showPassword);
 }
-
 
 // FOR THE ENGAGING MOVES IN THE UI
 const observer = new IntersectionObserver((entries) => {
@@ -108,8 +102,56 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 moveSections.forEach((move) => {
-    observer.observe(move);
+  observer.observe(move);
 });
+
+// SHOW SEARCH PAGE
+
+const searchPage = id("searchPage");
+const searchIcon = id("searchIcon");
+const searchPlay = id("searchPlay");
+const searchMsg = className("search-msg")[0];
+const inputSearch = id("searchInput");
+const searchResult = id("searchResult");
+
+//search play button
+if (searchPlay) {
+  searchPlay.addEventListener("click", () => {
+    searchMsg.classList.add("search-msgError");
+    searchMsg.innerText = "Not Available Yet!";
+  });
+}
+
+// Search Not Found
+if (inputSearch) {
+  inputSearch.addEventListener("input", () => {
+    const searchValue = inputSearch.value.trim();
+    const query = searchValue.toLowerCase();
+    if (query.length === 0 || query !== "mickey") {
+      searchMsg.innerText = `No results found for "${searchValue}"`;
+      searchMsg.classList.add("search-msgError");
+      searchResult.innerText = "0 Results";
+    } else {
+      searchMsg.classList.remove("search-msgError");
+      searchResult.innerText = "1 of 1 Result";
+    }
+    inputSearch.valu
+  });
+}
+
+//open and close search page
+if (searchIcon) {
+  searchIcon.addEventListener("click", () => {
+    searchPage.classList.add("show-search");
+  });
+}
+if (searchPage) {
+  searchPage.addEventListener("click", (e) => {
+    if (e.target === searchPage) {
+      searchPage.classList.remove("show-search");
+    }
+  });
+}
 
 //search icon animation
 const searchBtn = document.querySelector(".ti-search");
@@ -123,7 +165,6 @@ if (searchBtn) {
   });
 }
 
-
 //NAVBAR LINK
 const navLinks = document.querySelectorAll(".nav-link");
 navLinks.forEach((navLink) => {
@@ -131,4 +172,3 @@ navLinks.forEach((navLink) => {
     navLink.classList.add("active");
   }
 });
-
