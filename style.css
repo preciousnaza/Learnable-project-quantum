@@ -219,6 +219,8 @@ main{
   font-size: 10px;
   font-weight: 400;
   margin-inline: 5px;
+  position: fixed;
+  bottom: 1rem;
 }
 
 .footer-hd{
@@ -228,27 +230,28 @@ main{
 /* profile page styles */
 
 .profileP {
-  margin-top: 50px;
+  margin-top: 1rem;
   margin-bottom: 5px;
-  height: 22px;
-  font-size: 18px;
-  font-weight: 400;
+ 
 }
 
 .profile-img {
   text-align: center;
+  justify-content: center;
 
   margin-top: 40px;
 }
 .profile-img1 {
-  width: 181px;
-  height: 181px;
+  width: 120px;
+  height: 120px;
   border-radius: 100px;
   border: 2px solid var(--light-gray);
+  background: #D4AFBD;
 }
 
 .Username {
   margin-top: 10px;
+  justify-self: center;
 }
 
 .User-details {
@@ -256,6 +259,27 @@ main{
   width: 395px;
   background: rgb(5, 5, 46);
   margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+   padding: 12px 16px 12px 80px;
+}
+
+.user-entry{
+  display: flex;
+  flex-direction: row;
+  gap: 105px;
+  height: 36px;
+}
+
+.p1{
+  width: 55px;
+  height: 22px;
+  font-size: 18px;
+}
+.p2{
+text-align: left;
+font-size: 8px;
+
 }
 
 .logout {
@@ -268,7 +292,7 @@ main{
 
 /* Movie details page styles*/
 .arrow {
-  margin-top: 30px;
+  margin-top: 10px;
   margin-left: 15px;
 }
 .watching {
@@ -328,20 +352,43 @@ main{
   text-decoration: none;
   color: var(--primary-white);
   font-size: 12px;
+  cursor: pointer;
+}
+.play-now-btn{
+  border-radius: 8px;
+  height: 40px;
+  width: 106px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--primary-white);
+  font-size: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #0000ff;
+}
+
+.more{
+  display: flex;
+  flex-direction: row;
+  gap: 200px;
+  margin: 1.5rem 0 1rem 0;
+  font-size: 12px;
 }
 
 /* Watch later page styles */
 .watch-list{
   display: flex;
   flex-direction: row;
-  width: 375px;
   height: 75px;
+  width: 100%;
   gap: 10px;
-  margin-top: 3px;
+ margin-bottom: 2px;
   padding-left: 18px;
   padding-right: 10px;
   color: var(--light-gray);
   background: #000033;
+  
+
 }
 .col{
   flex: 1;
@@ -375,6 +422,69 @@ padding-top: 5px;
 .titleP{
   font-size: 18px;
 }
+
+
+/* notification page styles */
+
+.mybody{
+background-image: url(/assets/blurs/bg-image-blur.png);
+
+}
+
+.my-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-white);
+  width: 100%;
+}
+
+.my-logo{
+  width: 100px;
+  height: 16px;
+  margin-left: 35%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.notification{
+  color: var(--primary-white);
+  width:133px ;
+  height: 42px;
+  padding: 10px;
+}
+
+
+
+.notification-items{
+  display: flex;
+  flex-direction: row;
+  color: var(--light-gray);
+  background: #000033;
+  height: 48px;
+  width: 100%;
+  gap: 11px;
+  padding-top: 12px;
+  padding-left: 16px;
+
+}
+.new-list{
+  width: 147px;
+  font-size: 10px;
+}
+.list-detail{
+ 
+  font-size: 8px;
+
+}
+
+.notif-p{
+  font-size: 18px;
+ margin-bottom: 2rem;
+}
+.black-bg{
+  background: var(--primary-black);
 .bg{
   background: var(--bg-gradient);
 }
@@ -520,4 +630,3 @@ padding-top: 5px;
   font-size: 0.8rem;
   line-height: 1.2;
 }
-/* END OF SEARCH STYLES */
