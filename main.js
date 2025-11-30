@@ -172,3 +172,42 @@ navLinks.forEach((navLink) => {
     navLink.classList.add("active");
   }
 });
+
+//Menu Section
+const menuClose = document.querySelector('.menu-close');
+const mainmenu = document.querySelector('.mainmenu');
+const hamburger = document.getElementById('hamburgerIcon');
+
+hamburger.addEventListener("click", () => {
+    menuClose.classList.add("active");
+    mainmenu.classList.add("active");
+    document.body.classList.add("lock-scroll");
+});
+
+menuClose.addEventListener("click", () => {
+  mainmenu.classList.remove("active");
+  menuClose.classList.remove("active");
+  document.body.classList.remove("lock-scroll");
+});
+
+// Dropdown toggle for Genre
+const menuBody = document.querySelector('.menu-body');
+const menuItems = menuBody.querySelectorAll('li');
+const genreItem = menuItems[0];
+const dropdown = document.querySelector('.menu-dropdown');
+
+genreItem.addEventListener('click', (e) => {
+  e.preventDefault();
+  dropdown.classList.toggle('active');
+  genreItem.classList.toggle('active');
+});
+
+// Close dropdown when other menu items are clicked
+menuItems.forEach((item, index) => {
+  if (index !== 0) {
+    item.addEventListener('click', () => {
+      dropdown.classList.remove('active');
+      genreItem.classList.remove('active');
+    });
+  }
+});
