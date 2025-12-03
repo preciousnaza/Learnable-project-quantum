@@ -41,6 +41,7 @@ i { font-size: 14px; }
 .nav-menu {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem;
 }
 
