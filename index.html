@@ -13,15 +13,23 @@
           <img src="assets/Quantum-logo-white.png" alt="Logo" />
         </a>
         <div class="nav-icons">
+
+          <i class="bi bi-list" id="menuIcon"></i>
+
           <i class="bi bi-search" id="searchIcon"></i>
-          <i class="bi bi-list" id="hamburgerIcon"></i>
+        
         </div>
-      </nav>
+        <div class="nav-section">
+           <span><i class="bi bi-search"></i></span>
+          <span class="first-icon"> <i class="bi bi-list"></i></span>
+         
+        </div>
+      </div>
 
       <div class="hPhd-image">
         <div class="slider-section">
           <div class="slider">
-            <img src="assets/Movie Box (1).png" alt="" />
+            <img src="assets/moviebox1.jpg" alt="" />
 
             <div class="header-main">
               <h3>Captain America (2025)</h3>
@@ -40,7 +48,7 @@
           </div>
 
           <div class="slider">
-            <img src="assets/Movie Box (2).png" alt="" />
+            <img src="assets/movisbox2.jpg" alt="" />
 
             <div class="header-main">
               <h3>Captain America (2025)</h3>
@@ -59,7 +67,7 @@
           </div>
 
           <div class="slider">
-            <img src="assets/Movie Box (2).png" alt="" />
+            <img src="assets/moviebox 3.jpg" alt="" />
 
             <div class="header-main">
               <h3>Predator: Badlands</h3>
@@ -78,7 +86,7 @@
           </div>
 
           <div class="slider">
-            <img src="assets/Movie Box (1).png" alt="" />
+            <img src="assets/moviebox4.jpg" alt="" />
 
             <div class="header-main">
               <h3>Osiris (2025)</h3>
@@ -104,6 +112,7 @@
         </div>
       </div>
     </header>
+
     <!-- FOR THE SEARCH PAGE -->
     <section class="search-container" id="searchPage">
       <header class="search-header">
@@ -197,6 +206,9 @@
       </section>
     <!-- End of Navigation Bar -->
 
+
+
+
     <main>
       <div class="main">
         <div class="recommended-mv">
@@ -207,7 +219,7 @@
 
           <div class="mv-img">
             <span class="span-mv">
-              <img src="assets/rec 1.png" alt="image" />
+              <img src="assets/rec6.png" alt="image" />
               <p>
                 Mickey17 <br />
                 (2025)
@@ -215,7 +227,7 @@
             </span>
 
             <span class="span-mv">
-              <img src="assets/rec 2.png" alt="image" />
+              <img src="assets/rec2.jpg" alt="image" />
               <p>
                 Osiris <br />
                 (2025)
@@ -223,7 +235,7 @@
             </span>
 
             <span class="span-mv">
-              <img src="assets/rec 3.png" alt="image" />
+              <img src="assets/rec5.jpg" alt="image" />
               <p>
                 Superman<br />
                 (2025)
@@ -231,7 +243,7 @@
             </span>
 
             <span class="span-mv">
-              <img src="assets/rec 5.png" alt="image" />
+              <img src="assets/rec1.jpg" alt="image" />
               <p>
                 Cold Storage <br />
                 (2025)
@@ -248,42 +260,42 @@
 
           <div class="mv-img">
             <span class="span-mv">
-              <img src="assets/rec 4.png" alt="image" />
+              <img src="assets/rec3.jpg" alt="image" />
               <p>
                 predators <br />
                 (2026)
               </p>
             </span>
             <span class="span-mv">
-              <img src="assets/rec 6.png" alt="image" />
+              <img src="assets/rec4.jpg" alt="image" />
               <p>
                 Captain America <br />
                 (2026)
               </p>
             </span>
             <span class="span-mv">
-              <img src="assets/rec 3.png" alt="image" />
+              <img src="assets/rec6.png" alt="image" />
               <p>
                 Mickey17 <br />
                 (2025)
               </p>
             </span>
             <span class="span-mv">
-              <img src="assets/rec 5.png" alt="image" />
+              <img src="assets/rec2.jpg" alt="image" />
               <p>
                 Osiris <br />
                 (2025)
               </p>
             </span>
             <span class="span-mv">
-              <img src="assets/rec 2.png" alt="image" />
+              <img src="assets/rec5.jpg" alt="image" />
               <p>
                 Superman <br />
                 (2025)
               </p>
             </span>
             <span class="span-mv">
-              <img src="assets/rec 1.png" alt="image" />
+              <img src="assets/rec1.jpg" alt="image" />
               <p>
                 Cold Storage <br />
                 (2025)
@@ -294,9 +306,86 @@
       </div>
     </main>
 
+    <!-- FOR THE SEARCH PAGE -->
+    <section class="search-container" id="searchPage">
+      <header class="search-header">
+        <div class="search-logo">
+          <img src="assets/Quantum-logo-white.png" alt="Quantum Logo" />
+        </div>
+        <div class="search-group">
+          <input
+            type="text"
+            value="Mickey"
+            class="search-input"
+            id="searchInput"
+          />
+          <button class="search-icon">
+            <img src="assets/search.svg" alt="Search Icon" />
+          </button>
+        </div>
+        <span class="search-result-found" id="searchResult">1 of 1 Result</span>
+      </header>
+
+      <div class="search-result">
+        <div class="search-thumb">
+          <img src="assets/rec6.png" alt="Mickey 17" />
+        </div>
+        <div class="search-meta">
+          <span>Mickey 17 (2025)</span>
+          <span class="search-duration">2hrs</span>
+        </div>
+        <button class="search-play-btn" id="searchPlay">
+          <img src="assets/play-circle.png" alt="" />
+        </button>
+      </div>
+      <span class="search-msg"></span>
+
+      <div class="search-footer">
+        <div class="serach-logo">
+          <img src="assets/Quantum-logo-white.png" alt="Quantum logo" />
+        </div>
+        <p>
+          © 2025 Quantum + Ltd. All rights Reserved. A product of Upskill BST
+          Team learnable Find out more at Genesys
+        </p>
+      </div>
+    </section>
+
+    <!-- FOR NOTIFICATION PAGE -->
+    <section class="notification-container">
+        <div class="logo-section">
+          <img src="assets/Quantum-logo-white.png" alt="logo" />
+          <p>Notification</p>
+        </div>
+
+        <div class="notify">
+          <i class="bi bi-bell"></i>
+          <div class="span">
+            <span>New Listing</span>
+            <p>Superman (2025) will be in Cinema 17th December,2025</p>
+          </div>
+        </div>
+
+        
+      <div class="search-footer">
+        <div class="serach-logo">
+          <img src="assets/Quantum-logo-white.png" alt="Quantum logo" />
+        </div>
+        <p>
+          © 2025 Quantum + Ltd. All rights Reserved. A product of Upskill BST
+          Team learnable Find out more at Genesys
+        </p>
+      </div>
+    </section>
+
+    <!-- FOR LOGIN FORM -->
+     <section class="log-in">
+      
+     </section>
+
     <footer class="home-footer">
       <div class="footer-hd">
-        <img src="assets/logo.svg" alt="logo" />
+        <img src="assets/Quantum-logo-white.png" alt="logo" />
       </div>
       <div class="footer-txt">
         © 2025 Quantum + Ltd. <br />
