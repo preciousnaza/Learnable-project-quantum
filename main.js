@@ -1,4 +1,6 @@
-const sliderSection = document.querySelector(".slider-section");
+let indexpage = document.querySelector('.indexpage')
+
+  const sliderSection = document.querySelector(".slider-section");
 const slides = document.querySelectorAll(".slider");
 const dots = document.querySelectorAll(".dot span");
 
@@ -35,6 +37,7 @@ dots.forEach((dot, i) => {
 // Initialize
 showSlide(index);
 startAutoSlide();
+
 
 const q = (s) => document.querySelector(s);
 const qa = (s) => document.querySelectorAll(s);
@@ -101,9 +104,102 @@ if (searchBtn) {
   });
 }
 
-//Show notification
-// const notification = document.querySelector('')
-// const notifyPage = document.querySelector('.notification-container')
-// notification.addEventListener('click', function(){
-//   notifyPage.classList.add('show-notify')
-// })
+//Menu Section
+const menuClose = document.querySelector('.menu-close');
+const mainmenu = document.querySelector('.mainmenu');
+const hamburger = document.getElementById('menuIcon');
+
+if(hamburger){
+  hamburger.addEventListener("click", () => {
+    menuClose.classList.add("active");
+    mainmenu.classList.add("active");
+    document.body.classList.add("lock-scroll");
+});
+
+}
+
+if(menuClose){
+  menuClose.addEventListener("click", () => {
+  mainmenu.classList.remove("active");
+  menuClose.classList.remove("active");
+  document.body.classList.remove("lock-scroll");
+});
+}
+
+
+// Dropdown toggle for Genre
+const menuBody = document.querySelector('.menu-body');
+const menuItems = menuBody.querySelectorAll('li');
+const genreItem = menuItems[0];
+const dropdown = document.querySelector('.menu-dropdown');
+
+if(genreItem){
+  genreItem.addEventListener('click', (e) => {
+  e.preventDefault();
+  dropdown.classList.toggle('active');
+  genreItem.classList.toggle('active');
+});
+}
+
+
+// Close dropdown when other menu items are clicked
+menuItems.forEach((item, index) => {
+  if (index !== 0) {
+    item.addEventListener('click', () => {
+      dropdown.classList.remove('active');
+      genreItem.classList.remove('active');
+    });
+  }
+});
+
+// Show notification
+const notification = document.querySelector('.notification-btn')
+const notifyPage = document.querySelector('.notification-container')
+notification.addEventListener('click', function(){
+  notifyPage.classList.add('show-notify')
+   mainmenu.classList.remove("active");
+})
+
+// FOR MOVIDETAILS
+const mickey = document.querySelectorAll('.mickey')
+const mvDeatil = document.querySelector('.movie-detail')
+const main = document.querySelector(".main")
+const hdImage = document.querySelector(".hPhd-image")
+const footer = document.querySelector('footer')
+
+mickey.forEach(function(mickey){
+  mickey.addEventListener('click',function(){
+    mvDeatil.classList.add('active')
+    main.style.display = 'none'
+    hdImage.style.display = "none"
+    footer.style.backgroundColor = '#000080'
+    footer.style.margin = '0'
+    footer.style.paddingBottom = '10px'
+  })
+})
+
+//FOR FORM
+const loginBtn = document.querySelectorAll('.formlog-btn')
+const signupBtn = document.querySelectorAll('.formsign-btn')
+const  loginForm = document.querySelector('.login')
+const signForm = document.querySelector('.signup')
+let header = document.querySelector('header')
+let menu = document.querySelector('.mainmenu')
+
+loginBtn.forEach(function(loginBtn) {
+  loginBtn.addEventListener('click',function(){
+  loginForm.classList.add('active')
+  main.style.display = 'none'
+  header.style.display = "none"
+  menu.style.display = "none"
+})
+})
+
+signupBtn.forEach(function(signupBtn){
+  signupBtn.addEventListener('click',function(){
+  signForm.classList.add('active')
+  main.style.display = 'none'
+  header.style.display = "none"
+   menu.style.display = "none"
+})
+})
