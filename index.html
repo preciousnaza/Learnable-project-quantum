@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Quantum+/ Homepage</title>
   </head>
-  <body>
+  <body class="indexpage">
     <header class="home-hd">
       <nav class="nav-menu">
         <a href="index.html" class="logo">
@@ -19,12 +19,7 @@
           <i class="bi bi-search" id="searchIcon"></i>
         
         </div>
-        <div class="nav-section">
-           <span><i class="bi bi-search"></i></span>
-          <span class="first-icon"> <i class="bi bi-list"></i></span>
-         
-        </div>
-      </div>
+      </nav>
 
       <div class="hPhd-image">
         <div class="slider-section">
@@ -218,8 +213,8 @@
           </div>
 
           <div class="mv-img">
-            <span class="span-mv">
-              <img src="assets/rec6.png" alt="image" />
+            <span class="span-mv mickey" >
+             <a href="#"> <img src="assets/rec6.png" alt="image" /></a>
               <p>
                 Mickey17 <br />
                 (2025)
@@ -273,8 +268,8 @@
                 (2026)
               </p>
             </span>
-            <span class="span-mv">
-              <img src="assets/rec6.png" alt="image" />
+            <span class="span-mv mickey">
+             <a href="#"> <img src="assets/rec6.png" alt="image" /></a>
               <p>
                 Mickey17 <br />
                 (2025)
@@ -353,20 +348,19 @@
 
     <!-- FOR NOTIFICATION PAGE -->
     <section class="notification-container">
-        <div class="logo-section">
-          <img src="assets/Quantum-logo-white.png" alt="logo" />
-          <p>Notification</p>
-        </div>
+      <div class="logo-section">
+        <img src="assets/Quantum-logo-white.png" alt="logo" />
+        <p>Notification</p>
+      </div>
 
-        <div class="notify">
-          <i class="bi bi-bell"></i>
-          <div class="span">
-            <span>New Listing</span>
-            <p>Superman (2025) will be in Cinema 17th December,2025</p>
-          </div>
+      <div class="notify">
+        <i class="bi bi-bell"></i>
+        <div class="span">
+          <span>New Listing</span>
+          <p>Superman (2025) will be in Cinema 17th December,2025</p>
         </div>
+      </div>
 
-        
       <div class="search-footer">
         <div class="serach-logo">
           <img src="assets/Quantum-logo-white.png" alt="Quantum logo" />
@@ -378,10 +372,188 @@
       </div>
     </section>
 
-    <!-- FOR LOGIN FORM -->
-     <section class="log-in">
-      
+    <!-- For the Menu Section -->
+    <section class="mainmenu">
+      <div class="menu-top">
+        <div class="logo">
+          <img src="assets/Quantum-logo-white.png" alt="Quantum logo" />
+        </div>
+        <div class="menu-icons">
+          <div class="menu-close">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.2266 19.7732L19.7732 12.2266"
+                stroke="#FF4D4D"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M19.7732 19.7732L12.2266 12.2266"
+                stroke="#FF4D4D"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M11.9998 29.3332H19.9998C26.6665 29.3332 29.3332 26.6665 29.3332 19.9998V11.9998C29.3332 5.33317 26.6665 2.6665 19.9998 2.6665H11.9998C5.33317 2.6665 2.6665 5.33317 2.6665 11.9998V19.9998C2.6665 26.6665 5.33317 29.3332 11.9998 29.3332Z"
+                stroke="#FF4D4D"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="menu-hamburger">
+            <svg
+              width="21"
+              height="32"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.75 4.0835H12.25"
+                stroke="#F0F0F0"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M1.75 7H12.25"
+                stroke="#F0F0F0"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M1.75 9.9165H12.25"
+                stroke="#F0F0F0"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <ul class="menu-body">
+        <li>
+          <a href="#" style="font-size: larger"
+            >Genre <i class="bi bi-chevron-right genre-arrow"></i
+          ></a>
+        </li>
+        <ul class="menu-dropdown">
+          <li>
+            <a href="#" style="font-size: medium; color: #e1e1e1">Sci-fi</a>
+          </li>
+          <li>
+            <a href="#" style="font-size: medium; color: #e1e1e1">Drama</a>
+          </li>
+          <li>
+            <a href="#" style="font-size: medium; color: #e1e1e1">Action</a>
+          </li>
+          <li>
+            <a href="#" style="font-size: medium; color: #e1e1e1">Horror</a>
+          </li>
+          <li>
+            <a href="#" style="font-size: medium; color: #e1e1e1">Thrill</a>
+          </li>
+        </ul>
+        <li><a href="#" style="font-size: larger">Watchlist</a></li>
+        <li> <a href="#" class="notification-btn" style="font-size: larger">Notifications</a> </li>
+        <li><a href="profile.html" style="font-size: larger">Profile</a></li>
+        <li class="formlog-btn"><a href="#" style="font-size: larger">Login</a></li>
+        <li class="formsign-btn"><a href="#" style="font-size: larger">Sign Up</a></li>
+      </ul>
+      <div class="menu-bottom">
+        <div class="logo">
+          <img src="assets/Quantum-logo-white.png" alt="Quantum logo" />
+        </div>
+        <p style="font-size: xx-small">
+          © 2025 Quantum + Ltd.<br />
+          All rights Reserved.<br />
+          A product of Upskill BST Team learnable<br />
+          Find out more at Genesys
+        </p>
+      </div>
+    </section>
+
+    <!-- FOR MOVIEDETAILS -->
+     <section class="movie-detail">
+    <div class="my-main">
+        <div class="watching">
+            <img class="movie-poster" src="assets/rec6.png" alt="Watching now">
+            <h4 class="movie-title">Movie Title</h4>
+            <p class="release-year">(2025)</p>
+        </div>
+        <div class="movie-genres">
+            <p class="genre">Sci-Fi</p>
+            <p class="genre">Action</p>
+            <p class="genre">Thriller</p>
+            <p class="genre">SuperHero</p>
+        </div>
+
+        <section class="synopsis">
+            <h1>Synopsis</h1>
+            <p>Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. thkosn this is a sell continue </p>
+
+        </section>
+        <div class="details-btn">
+           <a class="watch-later-btn" href=""> <p> <i class="bi bi-stopwatch"></i> Watch later</p></a>
+           <a class="play-now-btn" href=""><p> <i class="bi bi-play"></i> Play now</p></a>
+            
+        </div>
+        <div class="more">
+            <p>More like this</p>
+            <a href="#"><i class="bi bi-chevron-right"></i></a>
+        </div>
+        <div class="more-poster">
+            <img src="assets/rec5.jpg" alt="movie1">
+            <img src="assets/rec6.png" alt="movie2">
+        </div>
+      </div>
      </section>
+
+       <!-- FOR signup FORM -->
+     <section class="form-sec signup">
+      <div class="logo-form">
+        <img src="assets/Quantum-logo-white.png" alt="logo">
+      </div>
+      <div class="welcome">
+        <p>Welcome</p>
+        <span>Let's get started</span>
+      </div>
+      <form action="">
+        <input type="text" placeholder="Enter your preferred username here">
+        <input type="text" placeholder="Enter your Email here">
+        <input type="text" placeholder="Enter your password here">
+
+        <button>Sign up</button>
+        <p>Already a user? <a href="#" class="formlog-btn">Sign in</a></p>
+      </form>
+     </section>
+
+     <!-- FOR login form -->
+     <section class="form-sec login">
+      <div class="logo-form">
+        <img src="assets/Quantum-logo-white.png" alt="logo">
+      </div>
+      <div class="welcome">
+        <p>Welcome Back!</p>
+      </div>
+      <form action="">
+        <input type="text" placeholder="Enter your username/Email">
+        <input type="text" placeholder="Enter your password">
+
+        <button>Sign in</button>
+        <p>Don't have an account? <a href="#" class="formsign-btn">Sign up</a></p>
+      </form>
+     </section>
+
 
     <footer class="home-footer">
       <div class="footer-hd">
