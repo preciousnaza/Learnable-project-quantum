@@ -925,7 +925,7 @@ footer{
   line-height: 1.2;
 }
 @media (min-width: 48rem) {
-    .list-container{
+    .list-container-small{
         display: none;
     }
 }

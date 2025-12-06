@@ -74,7 +74,6 @@ if (inputSearch) {
       searchMsg.classList.remove("search-msgError");
       searchResult.innerText = "1 of 1 Result";
     }
-    inputSearch.valu;
   });
 }
 
