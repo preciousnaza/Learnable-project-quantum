@@ -165,7 +165,7 @@ const mickey = document.querySelectorAll('.mickey')
 const mvDeatil = document.querySelector('.movie-detail')
 const main = document.querySelector(".main")
 const hdImage = document.querySelector(".hPhd-image")
-const footer = document.querySelector('footer')
+const footer = document.querySelector('.home-footer')
 
 mickey.forEach(function(mickey){
   mickey.addEventListener('click',function(){
@@ -177,6 +177,17 @@ mickey.forEach(function(mickey){
     footer.style.paddingBottom = '10px'
   })
 })
+
+//movie-detail watchlist
+const watchlaterBtn = document.querySelector('.watch-later-btn')
+const watchlaterBox = document.querySelector('.add-wachlist')
+let synopsis = document.querySelector('.synopsis')
+watchlaterBtn.addEventListener('click',function(){
+  console.log('clicked')
+  watchlaterBox.style.display = 'block'
+  synopsis.style.opacity = '0.5'
+})
+
 
 //FOR FORM
 const loginBtn = document.querySelectorAll('.formlog-btn')
@@ -203,3 +214,19 @@ signupBtn.forEach(function(signupBtn){
    menu.style.display = "none"
 })
 })
+
+//FOR VEDIO PLAYER
+let vedioPlayers = document.querySelectorAll('.play-vd')
+let vedio = document.querySelector('.vedio')
+let vedioHd = document.querySelector('.vedio-screen')
+let footerHm = document.querySelector('.home-footer')
+vedioPlayers.forEach(function(vedioPlayer){
+  vedioPlayer.addEventListener('click',function(){
+    vedioHd.style.display = 'block'
+    vedio.style.display = 'block'
+    header.style.display = "none"
+    main.style.display = 'none'
+    footerHm.style.display = 'none'
+  })
+})
+
