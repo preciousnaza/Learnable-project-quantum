@@ -801,3 +801,132 @@ footer{
 .footer-hd{
  margin-block: 10px;
 }
+
+
+/* START OF WATCH LIST STYLES */
+.list-container-small {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.185);
+  backdrop-filter: blur(1rem);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+}
+.show-list {
+  opacity: 1;
+  z-index: 10;
+  transform: translateX(0);
+}
+.list-header {
+  background: var(--primary-black);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.3rem 1rem 0.7rem;
+}
+.list-logo img {
+  width: 8rem;
+}
+.list-header .list-logo {
+  text-align: center;
+}
+.list-close-btn,
+.list-play-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.list-play-btn {
+  margin-left: auto;
+}
+.list-close-btn {
+  position: absolute;
+  top: 1.15rem;
+  right: 1rem;
+}
+.list-play-btn img {
+  width: 2rem;
+  height: 2rem;
+}
+.list-title {
+  color: var(--primary-white);
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 0.3rem;
+}
+.list-result {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  padding: 0.4rem 1rem;
+  background: var(--deep-blue);
+  color: var(--primary-white);
+  border-bottom: 1px solid var(--primary-white);
+}
+.list-thumb {
+  width: 4rem;
+  height: 5.5rem;
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+.list-thumb img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+.list-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  font-size: 1rem;
+}
+.list-duration {
+  font-size: 0.8rem;
+}
+.list-msg {
+  text-align: center;
+  color: var(--light-gray);
+  /* max-height: 0;
+  opacity: 0;
+  overflow: hidden; */
+  transition: all 0.75s ease;
+}
+.list-msgError {
+  max-height: 2rem;
+  opacity: 1;
+}
+.list-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--deep-blue);
+  text-align: center;
+  color: var(--light-gray);
+}
+.list-footer .logo {
+  margin-bottom: 0.5rem;
+}
+.list-footer p {
+  padding-inline: 4.5rem;
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+@media (min-width: 48rem) {
+    .list-container{
+        display: none;
+    }
+}
+/* END OF WATCH LIST STYLES */
