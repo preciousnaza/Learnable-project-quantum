@@ -51,6 +51,7 @@ const searchMsg = className("search-msg")[0];
 const inputSearch = id("searchInput");
 const searchResult = id("searchResult");
 const listPage = id("listPage");
+const listPageLarge = id("listPageLarge");
 const listBtn = id("listBtn");
 const listCloseBtn = id("listCloseBtn");
 //search play button
@@ -93,17 +94,17 @@ if (searchPage) {
 
 // FOR THE WATCH LIST PAGE
 if (listBtn) {
-  listBtn.addEventListener("click", (e) => {
+  listBtn.addEventListener("click", showWatch)}
+    function showWatch(e) {
     e.preventDefault();
     listPage.classList.add("show-list");
+    listPageLarge.classList.add("show-list");
     searchPage.classList.remove("show-search");
     document.body.classList.add("lock-scroll");
 
     menuClose.classList.remove("active");
     mainmenu.classList.remove("active");
-    console.log("Hello")
-  });
-}
+  };
 console.log(listBtn)
 
 //search icon animation
@@ -128,6 +129,7 @@ function closeMenu() {
   menuClose.classList.remove("active");
   document.body.classList.remove("lock-scroll");
   listPage.classList.remove("show-list");
+  listPageLarge.classList.remove("show-list");
 }
 if (hamburger) {
   hamburger.addEventListener("click", () => {
