@@ -51,7 +51,7 @@ const searchMsg = className("search-msg")[0];
 const inputSearch = id("searchInput");
 const searchResult = id("searchResult");
 const listPage = id("listPage");
-const listBtn = qa(".listBtn");
+const listBtn = id("listBtn");
 const listCloseBtn = id("listCloseBtn");
 //search play button
 if (searchPlay) {
@@ -93,18 +93,18 @@ if (searchPage) {
 
 // FOR THE WATCH LIST PAGE
 if (listBtn) {
-  listBtn.forEach(function (btn) {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      listPage.classList.add("show-list");
-      searchPage.classList.remove("show-search");
-      document.body.classList.add("lock-scroll");
+  listBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    listPage.classList.add("show-list");
+    searchPage.classList.remove("show-search");
+    document.body.classList.add("lock-scroll");
 
-      menuClose.classList.remove("active");
-      mainmenu.classList.remove("active");
-    });
+    menuClose.classList.remove("active");
+    mainmenu.classList.remove("active");
+    console.log("Hello")
   });
 }
+console.log(listBtn)
 
 //search icon animation
 const searchBtn = document.querySelector(".ti-search");
@@ -177,72 +177,70 @@ notification.addEventListener("click", function () {
 });
 
 // FOR MOVIDETAILS
-const mickey = document.querySelectorAll('.mickey')
-const mvDeatil = document.querySelector('.movie-detail')
-const main = document.querySelector(".main")
-const hdImage = document.querySelector(".hPhd-image")
-const footer = document.querySelector('.home-footer')
+const mickey = document.querySelectorAll(".mickey");
+const mvDeatil = document.querySelector(".movie-detail");
+const main = document.querySelector(".main");
+const hdImage = document.querySelector(".hPhd-image");
+const footer = document.querySelector(".home-footer");
 
-mickey.forEach(function(mickey){
-  mickey.addEventListener('click',function(){
-    mvDeatil.classList.add('active')
-    main.style.display = 'none'
-    hdImage.style.display = "none"
-    footer.style.backgroundColor = '#000080'
-    footer.style.margin = '0'
-    footer.style.paddingBottom = '10px'
-  })
-})
+mickey.forEach(function (mickey) {
+  mickey.addEventListener("click", function () {
+    mvDeatil.classList.add("active");
+    main.style.display = "none";
+    hdImage.style.display = "none";
+    footer.style.backgroundColor = "#000080";
+    footer.style.margin = "0";
+    footer.style.paddingBottom = "10px";
+  });
+});
 
 //movie-detail watchlist
-const watchlaterBtn = document.querySelector('.watch-later-btn')
-const watchlaterBox = document.querySelector('.add-wachlist')
-let synopsis = document.querySelector('.synopsis')
-watchlaterBtn.addEventListener('click',function(){
-  console.log('clicked')
-  watchlaterBox.style.display = 'block'
-  synopsis.style.opacity = '0.5'
-})
-
+const watchlaterBtn = document.querySelector(".watch-later-btn");
+const watchlaterBox = document.querySelector(".add-wachlist");
+let synopsis = document.querySelector(".synopsis");
+watchlaterBtn.addEventListener("click", function () {
+  console.log("clicked");
+  watchlaterBox.style.display = "block";
+  synopsis.style.opacity = "0.5";
+});
 
 //FOR FORM
-const loginBtn = document.querySelectorAll('.formlog-btn')
-const signupBtn = document.querySelectorAll('.formsign-btn')
-const  loginForm = document.querySelector('.login')
-const signForm = document.querySelector('.signup')
-let header = document.querySelector('header')
-let menu = document.querySelector('.mainmenu')
+const loginBtn = document.querySelectorAll(".formlog-btn");
+const signupBtn = document.querySelectorAll(".formsign-btn");
+const loginForm = document.querySelector(".login");
+const signForm = document.querySelector(".signup");
+let header = document.querySelector("header");
+let menu = document.querySelector(".mainmenu");
 
-loginBtn.forEach(function(loginBtn) {
-  loginBtn.addEventListener('click',function(){
-  loginForm.classList.add('active')
-  main.style.display = 'none'
-  header.style.display = "none"
-  menu.style.display = "none"
-})
-})
+loginBtn.forEach(function (loginBtn) {
+  loginBtn.addEventListener("click", function () {
+    loginForm.classList.add("active");
+    main.style.display = "none";
+    header.style.display = "none";
+    menu.style.display = "none";
+  });
+});
 
-signupBtn.forEach(function(signupBtn){
-  signupBtn.addEventListener('click',function(){
-  signForm.classList.add('active')
-  main.style.display = 'none'
-  header.style.display = "none"
-   menu.style.display = "none"
-})
-})
+signupBtn.forEach(function (signupBtn) {
+  signupBtn.addEventListener("click", function () {
+    signForm.classList.add("active");
+    main.style.display = "none";
+    header.style.display = "none";
+    menu.style.display = "none";
+  });
+});
 
 //FOR VEDIO PLAYER
-let vedioPlayers = document.querySelectorAll('.play-vd')
-let vedio = document.querySelector('.vedio')
-let vedioHd = document.querySelector('.vedio-screen')
-let footerHm = document.querySelector('.home-footer')
-vedioPlayers.forEach(function(vedioPlayer){
-  vedioPlayer.addEventListener('click',function(){
-    vedioHd.style.display = 'block'
-    vedio.style.display = 'block'
-    header.style.display = "none"
-    main.style.display = 'none'
-    footerHm.style.display = 'none'
-  })
-})
-
+let vedioPlayers = document.querySelectorAll(".play-vd");
+let vedio = document.querySelector(".vedio");
+let vedioHd = document.querySelector(".vedio-screen");
+let footerHm = document.querySelector(".home-footer");
+vedioPlayers.forEach(function (vedioPlayer) {
+  vedioPlayer.addEventListener("click", function () {
+    vedioHd.style.display = "block";
+    vedio.style.display = "block";
+    header.style.display = "none";
+    main.style.display = "none";
+    footerHm.style.display = "none";
+  });
+});
