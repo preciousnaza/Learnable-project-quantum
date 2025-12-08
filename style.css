@@ -40,8 +40,8 @@ body {
   position: relative;
 }
 
-i {
-  font-size: 14px;
+i{
+  font-size: 18px;
 }
 
 /* home page */
@@ -53,17 +53,12 @@ i {
   background: var(--primary-black);
   z-index: 1;
 }
-.nav-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-}
+
 .nav-menu .nav-icons {
   display: flex;
   gap: 1rem;
   color: var(--primary-white);
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .hPhd-image {
@@ -492,8 +487,10 @@ main {
   min-height: 100vh;
   color: var(--primary-white);
 }
-
-.form-sec {
+.form-image{
+  display: none;
+}
+.form-sec{
   background-image: url(assets/Background.png);
   width: 100%;
   height: 100vh;
@@ -725,6 +722,7 @@ form p a {
 .synopsis p {
   font-size: 8px;
   font-weight: 400;
+  width: 23rem;
 }
 .details-btn {
   margin-top: 30px;
@@ -751,6 +749,12 @@ form p a {
   background: var(--primary-blue);
   margin-left: 20px;
 }
+.md-suggest{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.more{
 .more {
   width: 100%;
   display: flex;
@@ -766,12 +770,7 @@ form p a {
 .more .bi {
   font-size: 14px;
 }
-.more-poster {
-  margin-block: 10px;
-  display: flex;
-  justify-content: center;
-}
-.more-poster img {
+.more-poster img{
   width: 12rem;
   margin-right: 10px;
   border-radius: 15px;
@@ -789,8 +788,8 @@ form p a {
   transform: translateX(-50%);
   border: 2px solid var(--light-blue);
   background-image: url(assets/Background.png);
-  width: 20rem;
-  height: 45vh;
+  width: 18rem;
+  height: 40vh;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -813,11 +812,12 @@ form p a {
 }
 .md-box .bi {
   font-weight: 300;
-  font-size: 80px;
+  font-size: 60px;
 }
 
 /* vedio player */
-.vedio {
+.vedio{
+  display: none;
   margin: 30px;
 }
 .vedio img {
@@ -843,6 +843,61 @@ footer {
   margin-inline: 5px;
 }
 
+.footer-hd{
+ margin-block: 10px;
+}
+
+/* MEDIA QUERIRES */
+/* FORM */
+@media (min-width:700px) {
+  .form-body{
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 30px;
+  align-items: center;
+  margin: o auto;
+  margin-top: 50px;
+}
+.form-image{
+  display: inline-block;
+}
+.form-image img{
+  width: 20rem;
+}
+
+
+
+.welcome{
+  margin-top: 0;
+}
+.welcome p{
+  font-size: 40px;
+}
+.welcome span{
+  font-size: 16px;
+}
+form input{
+  width: 19rem;
+  height: 30px;
+  font-size: 10px;
+}
+form button{
+  width: 8rem;
+  height: 40px;
+}
+form p{
+  color: var(--primary-white);
+  margin-top: 15px;
+  font-size: 12px;
+  font-weight: 400;
+}
+form p a{
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--light-blue);
+  text-decoration: none;
+}
+}
 .footer-hd {
   margin-block: 10px;
 }
