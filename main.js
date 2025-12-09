@@ -83,7 +83,6 @@ if (searchIcon) {
     searchIcon.forEach(function(searchIcon){
    searchIcon.addEventListener("click", () => {
     searchPage.classList.add("show-search");
-    console.log('clicked')
   });
 })
 }
@@ -217,10 +216,53 @@ const loginForm = document.querySelector(".login");
 const signForm = document.querySelector(".signup");
 let header = document.querySelector("header");
 let menu = document.querySelector(".mainmenu");
+const userSec = document.querySelector('.user');
+const nonUser = document.querySelector('.non-user');
+const logSign = document.querySelectorAll('.enter-home');
+const logoutBtn = document.getElementById('logoutBtn');
+
+// Handle Login or Signup
+logSign.forEach(function(btn){
+  btn.addEventListener('click', function(){
+    localStorage.setItem("isLoggedIn", "true");
+
+    window.location.href = "index.html";
+  });
+});
+
+// Check login state when page loads
+window.addEventListener("load", function(){
+  const logged = localStorage.getItem("isLoggedIn");
+
+  if(logged === "true"){
+    userSec.style.display = "block";
+    nonUser.style.display = "none";
+  } else {
+    userSec.style.display = "none";
+    nonUser.style.display = "block";
+  }
+});
+
+//logout
+
+if (logoutBtn) {
+  logoutBtn.addEventListener('click', function(e){
+    e.preventDefault();
+
+    // Remove login state
+    localStorage.removeItem("isLoggedIn");
+
+    // Redirect to homepage
+    window.location.href = "index.html";
+  });
+}
+
+
 
 loginBtn.forEach(function (loginBtn) {
   loginBtn.addEventListener("click", function () {
     loginForm.classList.add("active");
+    signForm.classList.remove('active')
     main.style.display = "none";
     header.style.display = "none";
     menu.style.display = "none";
@@ -232,6 +274,7 @@ loginBtn.forEach(function (loginBtn) {
 signupBtn.forEach(function (signupBtn) {
   signupBtn.addEventListener("click", function () {
     signForm.classList.add("active");
+    loginForm.classList.remove('active')
     main.style.display = "none";
     header.style.display = "none";
     menu.style.display = "none";
@@ -243,18 +286,48 @@ signupBtn.forEach(function (signupBtn) {
 //FOR VEDIO PLAYER
 let vedioPlayers = document.querySelectorAll(".play-vd");
 let vedio = document.querySelector(".vedio");
-let vedioHd = document.querySelector(".vedio-screen");
 let footerHm = document.querySelector(".home-footer");
+
 vedioPlayers.forEach(function (vedioPlayer) {
   vedioPlayer.addEventListener("click", function () {
-    vedioHd.style.display = "block";
     vedio.style.display = "block";
     header.style.display = "none";
     main.style.display = "none";
-    footerHm.style.display = "none";
+   footerHm .style.display = "none";
+
+
+    const btn = document.getElementById("playToggle");
+    const icon = document.getElementById("playIcon");
+
+    btn.addEventListener("click", () => {
+      if (icon.classList.contains("bi-play-fill")) {
+          icon.classList.replace("bi-play-fill", "bi-pause-fill");
+      } else {
+          icon.classList.replace("bi-pause-fill", "bi-play-fill");
+      }
+});
+
+
+      function checkWidth() {
+
+          if (window.innerWidth >= 768) {
+              header.style.display = 'block'
+              footerHm.style.display = "block";
+              hdImage.style.display = "none";
+               vedio.style.marginTop = "100px";
+          } else {
+              footerHm.style.display = "none";
+              header.style.display = 'none'
+          }
+      }
+
+      checkWidth();
+
+      window.addEventListener("resize", checkWidth);
 
   });
 });
+
 
 //coming soon movies
 const comingNotify = document.querySelector('.coming-notify')
