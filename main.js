@@ -45,7 +45,7 @@ const className = (cls) => document.getElementsByClassName(cls);
 
 // SHOW SEARCH PAGE
 const searchPage = id("searchPage");
-const searchIcon = id("searchIcon");
+const searchIcon = document.querySelectorAll("#searchIcon");
 const searchPlay = id("searchPlay");
 const searchMsg = className("search-msg")[0];
 const inputSearch = id("searchInput");
@@ -80,9 +80,12 @@ if (inputSearch) {
 
 //open and close search page
 if (searchIcon) {
-  searchIcon.addEventListener("click", () => {
+    searchIcon.forEach(function(searchIcon){
+   searchIcon.addEventListener("click", () => {
     searchPage.classList.add("show-search");
+    console.log('clicked')
   });
+})
 }
 if (searchPage) {
   searchPage.addEventListener("click", (e) => {
@@ -122,7 +125,7 @@ if (searchBtn) {
 //Menu Section
 const menuClose = document.querySelector(".menu-close");
 const mainmenu = document.querySelector(".mainmenu");
-const hamburger = document.getElementById("menuIcon");
+const hamburger = document.querySelectorAll("#menuIcon");
 
 function closeMenu() {
   mainmenu.classList.remove("active");
@@ -132,11 +135,13 @@ function closeMenu() {
   listPageLarge.classList.remove("show-list");
 }
 if (hamburger) {
-  hamburger.addEventListener("click", () => {
+  hamburger.forEach(function(hamburger){
+     hamburger.addEventListener("click", () => {
     menuClose.classList.add("active");
     mainmenu.classList.add("active");
     document.body.classList.add("lock-scroll");
   });
+  })
 }
 if (menuClose) {
   menuClose.addEventListener("click", closeMenu);
@@ -220,6 +225,8 @@ loginBtn.forEach(function (loginBtn) {
     main.style.display = "none";
     header.style.display = "none";
     menu.style.display = "none";
+    footer.style.backgroundColor = '#000033'
+    footer.style.margin = '0px'
   });
 });
 
@@ -229,6 +236,8 @@ signupBtn.forEach(function (signupBtn) {
     main.style.display = "none";
     header.style.display = "none";
     menu.style.display = "none";
+      footer.style.margin = '0px'
+    footer.style.backgroundColor = '#000033'
   });
 });
 
@@ -244,5 +253,15 @@ vedioPlayers.forEach(function (vedioPlayer) {
     header.style.display = "none";
     main.style.display = "none";
     footerHm.style.display = "none";
+
   });
 });
+
+//coming soon movies
+const comingNotify = document.querySelector('.coming-notify')
+const comingMv = document.querySelectorAll('.coming-soon')
+comingMv.forEach(function(comingMv){
+  comingMv.addEventListener('click',function(){
+    comingNotify.classList.add('active')
+  })
+})
