@@ -16,7 +16,8 @@
           <i class="bi bi-search" id="searchIcon"></i>
         </div>
       </div>
-      <div class="header-list">
+     <div class="non-user">
+       <div class="header-list">
          <a href="index.html"> <img src="assets/Quantum-logo-white.png" alt="logo"></a>
         <div class="search">
           <input type="text" placeholder="search">
@@ -24,10 +25,24 @@
         </div>
         <div class="menu-sec" id="menuIcon">
           <i class="bi bi-list" id="menuIcon"></i>
-          <!-- <i class="bi bi-person-circle"></i> -->
           <span class="formsign-btn"><a href="#">Sign up</a></span>
           <span class="formlog-btn"><a href="#">Login</a></span>
         </div>
+      </div>
+     </div>
+      <div class="user">
+        <div class="header-list">
+         <a href="index.html"> <img src="assets/Quantum-logo-white.png" alt="logo"></a>
+        <div class="search">
+          <input type="text" placeholder="search">
+          <i class="bi bi-search" id="searchIcon"></i>
+        </div>
+        <div class="menu-sec" id="menuIcon">
+          <i class="bi bi-list" id="menuIcon"></i>
+          <i class="bi bi-person-circle"></i>
+          <span><a href="#" id="logoutBtn">Logout</a></span>
+        </div>
+      </div>
       </div>
 
       <div class="hPhd-image">
@@ -432,7 +447,7 @@
           <input type="text" placeholder="Enter your Email here" />
           <input type="text" placeholder="Enter your password here" />
 
-          <button>Sign up</button>
+          <button class="enter-home">Sign up</button>
           <p>Already a user? <a href="#" class="formlog-btn">Sign in</a></p>
         </form>
         </div>
@@ -457,7 +472,7 @@
         <input type="text" placeholder="Enter your username/Email" />
         <input type="text" placeholder="Enter your password" />
 
-        <button>Sign in</button>
+        <button class="enter-home" >login</button>
         <p>
           Don't have an account? <a href="#" class="formsign-btn">Sign up</a>
         </p>
@@ -470,8 +485,46 @@
 
     <!-- FOR VEDIO PLAYER -->
      <section class="vedio">
-     <a href="index.html"> <i class="bi bi-chevron-left"></i></a>
-      <img class="vedio-screen" src="assets/vedio.jpg" alt="vedio">
+
+    <div class="video-wrapper">
+        <img src="assets/Video placeholder.png" class="video-image" />
+
+        <!-- Top Icons -->
+        <div class="top-icons">
+            <div class="icon-btn"><a href="index.html"><i class="bi bi-arrow-left"></i></a></div>
+
+            <div style="display: flex; gap: 10px; align-items: center;">
+             
+                <div class="icon-btn"></div>
+                <div class="icon-btn"><i class="bi bi-three-dots-vertical"></i></div>
+            </div>
+        </div>
+
+        <!-- Center Controls -->
+        <div class="center-controls">
+            <div class="side-btn"><i class="bi bi-rewind-15"></i></div>
+
+            <!-- Play Button (toggles) -->
+            <div class="play-btn" id="playToggle">
+                <i class="bi bi-play-fill" id="playIcon"></i>
+            </div>
+
+            <div class="side-btn"><i class="bi bi-fast-forward-15"></i></div>
+        </div>
+
+        <!-- Bottom details -->
+        <div class="movie-info">
+            <div class="movie-title">Captain America (2025)</div>
+            <div class="movie-type">Movie</div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-fill"></div>
+        </div>
+
+        <div class="time-label">49:28 / 1:59:21</div>
+    </div>
+
      </section>
 
     <footer class="home-footer">
