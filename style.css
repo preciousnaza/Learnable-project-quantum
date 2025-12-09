@@ -75,7 +75,10 @@ i{
 
 .nav-menu .nav-icons .bi{
   font-size: 23px;
+<<<<<<< HEAD
+=======
   z-index: 999;
+>>>>>>> 9843388fc1c510c37ba3f87b279da7a2dd8931c8
 }
 
 .hPhd-image {
@@ -787,7 +790,10 @@ form p a {
 .more .bi {
   font-size: 14px;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 9843388fc1c510c37ba3f87b279da7a2dd8931c8
 .more-poster{
   margin-top: 13px;
   display: flex;
