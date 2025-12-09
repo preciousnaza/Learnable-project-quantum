@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,450;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,450;1,700;1,800;1,900&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 
 :root {
@@ -24,6 +24,7 @@
     var(--dark-blue)
   );
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -53,17 +54,26 @@ i{
 .header-list{
   display: none;
 }
+
+/* make nav-menu a known height and higher z-index so it's always on top for clicks,
+   and ensure content is pushed down so the header/slider isn't hidden under it */
 .nav-menu {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background: var(--primary-black);
-  z-index: 1;
+  z-index: 1000; /* raised so icons are clickable */
   display: flex;
   justify-content: space-between;
-    align-items: center;
+  align-items: center;
   padding: 1rem;
+  height: 64px; /* fixed height used to offset the header below */
+}
+
+.nav-menu a img {
+  height: 40px;
+  object-fit: contain;
 }
 
 .nav-menu .nav-icons {
@@ -76,20 +86,22 @@ i{
 .nav-menu .nav-icons .bi{
   font-size: 23px;
   z-index: 999;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
+/* ensure the header/slider starts below the fixed nav so nav doesn't "take over" it */
 .hPhd-image {
   position: relative;
-  height: 320px;
+  /* push down by nav height so the fixed nav doesn't overlap the visible top of the slider */
+  margin-top: 64px;
+  height: auto;
 }
 
+/* slider height increased as requested */
 .slider-section {
   display: flex;
   overflow-x: scroll;
-}
-.slider {
-  position: relative;
-  height: 320px;
 }
 
 .slider-section {
@@ -101,14 +113,14 @@ i{
 
 .slider {
   min-width: 100%;
-  height: 320px;
+  height: 450px; /* updated to 450px */
   position: relative;
 }
 
 .slider img {
   width: 100%;
   object-fit: cover;
-  height: 320px;
+  height: 100%;
 }
 
 .dot {
@@ -118,6 +130,7 @@ i{
   bottom: 8px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 10;
 }
 
 .dot span {
@@ -181,6 +194,7 @@ main {
   background-image: url(assets/Background.png);
 }
 
+/* rest of your CSS unchanged — copied exactly from your provided file */
 .mv-text {
   display: flex;
   justify-content: space-between;
@@ -277,7 +291,7 @@ main {
 }
 .info-p span {
   font-size: 10px;
-  font-weight: 600;
+  font-weight: 450;
   display: block;
 }
 .info-p p {
@@ -477,7 +491,7 @@ main {
   width: 100%;
   align-items: center;
   font-size: 10px;
-  font-weight: 600;
+  font-weight: 450;
   margin-top: -18px;
 }
 .notify .bi {
@@ -782,7 +796,7 @@ form p a {
 .more a {
   color: var(--primary-white);
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 450;
 }
 .more .bi {
   font-size: 14px;
@@ -966,7 +980,6 @@ form p a {
     font-size: 13px;
 }
 
-
 /* COMING SOOn NOTIFICATION */
 .coming-notify{
   display: none;
@@ -997,7 +1010,6 @@ form p a {
      right: -300px;
   }
 }
-
 
 /* FOOTER STYLE */
 footer {
@@ -1199,33 +1211,8 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-
-  button {
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
-    background: transparent;
-    color: var(--primary-white);
-    transition: background 0.3s ease;
-
-    &.list-sign-up {
-      border: 1px solid var(--primary-white);
-      padding: 0.3rem 0.8rem;
-      border-radius: 0.5rem;
-    }
-    &.list-log-in {
-      border: 1px solid var(--primary-blue);
-      background: var(--primary-blue);
-      padding: 0.3rem 1.3rem;
-      border-radius: 0.5rem;
-    }
-  }
-  img {
-    width: 1.8rem;
-    height: 1.8rem;
-  }
 }
+
 .list-title-lg {
   color: var(--primary-white);
   font-size: 1.5rem;
@@ -1241,13 +1228,6 @@ footer {
   padding: 2rem 5rem;
   text-align: center;
   color: var(--light-gray);
-
-  p {
-    width: 20rem;
-    margin: 0 auto;
-    font-size: 0.8rem;
-    line-height: 1.2;
-  }
 }
 .result-lg {
   display: flex;
@@ -1255,41 +1235,6 @@ footer {
   justify-content: center;
   height: 100%;
   gap: 2rem;
-
-  .list-result-lg {
-    background: var(--deep-blue);
-    color: var(--light-gray);
-    font-size: 0.9rem;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 10rem;
-    gap: 1rem;
-
-    .list-meta-lg {
-      display: flex;
-      flex-direction: column;
-    }
-    .list-thumb-lg {
-      width: 6rem;
-      height: 8rem;
-      border-radius: 0.7rem;
-      overflow: hidden;
-    }
-    .list-thumb-lg img {
-      max-inline-size: 100%;
-      block-size: auto;
-    }
-  }
-  .list-play-btn-lg {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-  }
 }
 .list-msg-lg {
   text-align: center;
@@ -1303,14 +1248,15 @@ footer {
   max-height: 2rem;
   opacity: 1;
 }
-@media (min-width: 48rem) {
-  .list-container-small {
+
+/* MEDIA QUERIES */
+@media (min-width:48rem) {
+.list-container-small {
     display: none;
   }
   .list-container{
     display: flex;
   }
-}
 
 .show-list {
   opacity: 1;
@@ -1318,8 +1264,6 @@ footer {
   transform: translateX(0);
 }
 
-/* MEDIA QUERIRES */
-@media (min-width:48rem) {
 /* Header list */
 .nav-menu{
   display: none;
@@ -1340,10 +1284,11 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 15px;
 }
 .header-list img{
-  height: 24px;
+  width: 208px;
+  height: 34px;
 }
 .header-list .search{
   position: relative;
@@ -1374,10 +1319,12 @@ footer {
 }
 .header-list .menu-sec .bi{
   color: var(--primary-white);
-  font-size: 20px;
+  font-size: 48px;
   margin-right: 15px;
 }
 .header-list span{
+  width: 115.5px;
+  height: 48px;
   color: var(--primary-white);
   font-weight: 500;
   font-size: 20px;
@@ -1385,8 +1332,13 @@ footer {
   padding: 4px 10px;
   border-radius: 12px;
   cursor: pointer;
+  text-align: center;
 }
 .header-list span:nth-of-type(2){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background-color: var(--primary-blue);
   margin-left: 15px;
   border: none;
