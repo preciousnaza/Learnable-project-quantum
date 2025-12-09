@@ -73,6 +73,10 @@ i{
   font-size: 2rem;
 }
 
+.nav-menu .nav-icons .bi{
+  font-size: 23px;
+}
+
 .hPhd-image {
   position: relative;
   height: 320px;
