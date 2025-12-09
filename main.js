@@ -206,7 +206,6 @@ const watchlaterBtn = document.querySelector(".watch-later-btn");
 const watchlaterBox = document.querySelector(".add-wachlist");
 let synopsis = document.querySelector(".synopsis");
 watchlaterBtn.addEventListener("click", function () {
-  console.log("clicked");
   watchlaterBox.style.display = "block";
   synopsis.style.opacity = "0.5";
 });
