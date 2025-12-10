@@ -53,16 +53,19 @@ i{
 .header-list{
   display: none;
 }
+.nav-section{
+  z-index: 9999;
+}
 .nav-menu {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background: var(--primary-black);
-  z-index: 1;
   display: flex;
+  z-index: 9999;
   justify-content: space-between;
-    align-items: center;
+  align-items: center;
   padding: 1rem;
 }
 
@@ -75,15 +78,16 @@ i{
 
 .nav-menu .nav-icons .bi{
   font-size: 23px;
-<<<<<<< HEAD
-=======
   z-index: 999;
->>>>>>> 9843388fc1c510c37ba3f87b279da7a2dd8931c8
 }
 
 .hPhd-image {
   position: relative;
   height: 320px;
+}
+
+.slider-section{
+  margin-top: 80px; 
 }
 
 .slider-section {
@@ -790,10 +794,7 @@ form p a {
 .more .bi {
   font-size: 14px;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 9843388fc1c510c37ba3f87b279da7a2dd8931c8
 .more-poster{
   margin-top: 13px;
   display: flex;
@@ -1342,7 +1343,7 @@ footer {
   left: 0;
   right: 0;
   background: var(--primary-black);
-  z-index: 1;
+  z-index: 9999;
   display: flex;
   justify-content: space-between;
   align-items: center;
