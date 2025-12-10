@@ -1,9 +1,8 @@
 const sliderSection = document.querySelector(".slider-section");
 const slides = document.querySelectorAll(".slider");
 const dots = document.querySelectorAll(".dot span");
-const userNavSec = document.querySelectorAll(".user");
-const nonuserSec = document.querySelectorAll(".non-user");
-const navbarSec = document.querySelectorAll(".nav-menu");
+const userNavSec = document.querySelector(".user");
+const headerListSec= document.querySelector(".header-list");
 
 
 
@@ -103,13 +102,13 @@ if (inputSearch) {
   });
 }
 
-//open and close search page (support touch)
-if (searchIconNodes && searchIconNodes.length) {
-  searchIconNodes.forEach(function (icon) {
-    addClickTouch(icon, () => {
-      if (searchPage) searchPage.classList.add("show-search");
-    });
+//open and close search page
+if (searchIcon) {
+    searchIcon.forEach(function(searchIcon){
+   searchIcon.addEventListener("click", () => {
+    searchPage.classList.add("show-search");
   });
+})
 }
 if (searchPage) {
   searchPage.addEventListener("click", (e) => {
@@ -164,6 +163,9 @@ if (hamburger && hamburger.length) {
       if (menuClose) menuClose.classList.add("active");
       if (mainmenu) mainmenu.classList.add("active");
       document.body.classList.add("lock-scroll");
+      userNavSec.style.zIndex = '1';
+      headerListSec.style.zIndex = '1';
+      console.log('clicked')
     });
   });
 }

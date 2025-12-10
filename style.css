@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,450;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,450;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 
 :root {
@@ -71,7 +71,6 @@ i{
 }
 
 .nav-menu a img {
-  height: 40px;
   object-fit: contain;
 }
 
@@ -165,10 +164,6 @@ i{
   line-height: 120%;
 }
 .header-paly {
-  position: absolute;
-  left: 50%;
-  top: 70%;
-  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,6 +184,13 @@ i{
 
 main {
   background-image: url(assets/Background.png);
+}
+
+.recommended-mv,.trending-now{
+  margin-top: 40px;
+}
+.trending-now{
+  margin-bottom: 40px;
 }
 
 .mv-text {
@@ -227,76 +229,18 @@ main {
 .span-mv p {
   width: 100%;
   position: absolute;
-  bottom: 5px;
+  bottom: 4px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   left: 50%;
   text-align: center;
   transform: translateX(-50%);
   color: #ffffff;
-  background: rgba(255, 255, 255, 0.185);
+  background: #333333;
   backdrop-filter: blur(50px);
+  padding: 3px;
 }
 
-/* profile page styles */
-.profile {
-  background-image: url(assets/Background.png);
-}
-.logo-p {
-  text-align: center;
-  margin-block: 20px;
-}
-.main-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.profile-p {
-  font-size: 18px;
-  font-weight: 400;
-  line-break: 120%;
-  color: var(--primary-white);
-  margin-block: 40px;
-  font-size: 18px;
-  font-weight: 400;
-}
-.profile-image {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--primary-white);
-  margin-block-end: 60px;
-}
-.profile-image img {
-  width: 50%;
-}
-.profile-image p {
-  margin-top: 10px;
-}
-.profile-details {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-block-end: 60px;
-}
-.info-p {
-  display: flex;
-  color: var(--primary-white);
-  margin-top: 20px;
-  gap: 100px;
-}
-.info-p span {
-  font-size: 10px;
-  font-weight: 450;
-  display: block;
-}
-.info-p p {
-  font-size: 8px;
-  font-weight: 400;
-  display: block;
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
 
 /* START OF SEARCH STYLES */
 .search-container {
@@ -1283,14 +1227,14 @@ footer {
   padding: 15px;
 }
 .header-list img{
-  width: 208px;
-  height: 34px;
+  width: 150px;
+  height: 28px;
 }
 .header-list .search{
   position: relative;
 }
 .header-list .search input{
- width: 20rem;
+ width: 300px;
  color: var(--primary-white);
  background-color: #333333;
  outline: none;
@@ -1315,12 +1259,12 @@ footer {
 }
 .header-list .menu-sec .bi{
   color: var(--primary-white);
-  font-size: 48px;
+  font-size: 35px;
   margin-right: 15px;
 }
 .header-list span{
-  width: 115.5px;
-  height: 48px;
+  width: 120px;
+  height: 41px;
   color: var(--primary-white);
   font-weight: 500;
   font-size: 20px;
@@ -1344,6 +1288,28 @@ footer {
 }
 .hPhd-image img{
   object-fit: cover;
+}
+.header-main h3 {
+  font-size: 40px;
+}
+.header-main .list span {
+  font-size: 20px;
+}
+.header-paly {
+  width: 145px;
+  height: 48px;
+  font-size: 20px;
+}  
+
+/* recommended for you */
+.mv-text {
+  font-size: 30px;
+}
+.mv-img {
+  display: grid;
+}
+.span-mv p {
+  font-size: 20px;
 }
 
 /* MENU STYLE */
@@ -1409,6 +1375,14 @@ form p a{
   color: var(--light-blue);
   text-decoration: none;
 }
+}
+
+/* footer */
+.home-footer {
+  font-size: 18px;
+}
+.home-footer img{
+  width: 200px;
 }
 
 
