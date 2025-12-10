@@ -795,24 +795,10 @@ form p a {
 }
 
 /* vedio player */
-.vedio{
-  display: none;
-  margin: 30px;
-  position: relative;
-}
-.video-wrapper {
-    width: 100%;
-    max-width: 900px;
-    margin: 40px auto;
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
-}
-
-.video-image {
-    width: 100%;
-    height: auto;
-    display: block;
+video {
+  width: 100vw;     
+  height: 100vh;    
+  object-fit: cover; 
 }
 
 /* Top icons */

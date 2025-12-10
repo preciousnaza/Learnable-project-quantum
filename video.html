@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- VIDEO 1 -->
+  <div id="video1" class="video-box">
+    <video width="350" controls>
+      <source src="assets/The Running Man _ Official Trailer (2025 Movie) - Edgar Wright_ Glen Powell(360P).mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- VIDEO 2 -->
+  <div id="video2" class="video-box">
+    <video width="350" controls>
+      <source src="assets/Captain America_ Brave New World _ Official Trailer(360P).mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- VIDEO 3 -->
+  <div id="video3" class="video-box">
+    <video width="350" controls>
+      <source src="assets/Predator_ Badlands _ Official Trailer(360P).mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- VIDEO 4 -->
+  <div id="video4" class="video-box">
+    <video width="350" controls>
+      <source src="assets/OSIRIS Official Trailer (2025)(360P).mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- VIDEO 5 -->
+    <div id="video5" class="video-box">
+    <video width="350" controls>
+      <source src="assets/Mickey 17 _ Official Trailer(360P).mp4" type="video/mp4">
+    </video>
+  </div>
+
+
+  <script>
+    // Read ?video=video1 from the URL
+const params = new URLSearchParams(window.location.search);
+const videoID = params.get("video");
+
+// Hide all videos
+document.querySelectorAll(".video-box").forEach(box => {
+  box.style.display = "none";
+});
+
+// Show the selected one
+if (videoID) {
+  const selected = document.getElementById(videoID);
+  if (selected) {
+    selected.style.display = "block";
+  }
+}
+
+  </script>
+</body>
+</html>
