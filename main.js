@@ -1,7 +1,7 @@
 const sliderSection = document.querySelector(".slider-section");
 const slides = document.querySelectorAll(".slider");
 const dots = document.querySelectorAll(".dot span");
-const userNavSec = document.querySelector(".user");
+const userNavSec = document.querySelector(".nav-menu");
 const headerListSec= document.querySelector(".header-list");
 
 
