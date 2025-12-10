@@ -54,7 +54,7 @@ i{
   display: none;
 }
 .nav-section{
-  z-index: 9999;
+  z-index: 1;
 }
 .nav-menu {
   position: fixed;
@@ -63,7 +63,7 @@ i{
   right: 0;
   background: var(--primary-black);
   display: flex;
-  z-index: 9999;
+  z-index: 1;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
@@ -77,7 +77,6 @@ i{
 }
 
 .nav-menu .nav-icons .bi{
-  font-size: 23px;
   z-index: 999;
 }
 
@@ -1343,20 +1342,24 @@ footer {
   left: 0;
   right: 0;
   background: var(--primary-black);
-  z-index: 9999;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
 }
+.hd-logo-btn
 .header-list img{
-  height: 24px;
+  height: 34px;
+  width: 200px;
 }
 .header-list .search{
   position: relative;
+  width: 415px;
+ height: 48px;
 }
 .header-list .search input{
- width: 20rem;
+  width: 100%;
  color: var(--primary-white);
  background-color: #333333;
  outline: none;
