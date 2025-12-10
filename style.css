@@ -797,8 +797,8 @@ form p a {
 /* vedio player */
 video {
   width: 100vw;     
-  height: 100vh;    
-  object-fit: cover; 
+  height: 97vh;    
+  object-fit: contain; 
 }
 
 /* Top icons */
@@ -1388,6 +1388,10 @@ footer {
   background-color: var(--primary-black);
 }
 
+/* VEDIO */
+video {
+  object-fit: cover; 
+}
 
 /* FORM */
   .form-body{
