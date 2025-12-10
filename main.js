@@ -107,6 +107,8 @@ if (searchIcon) {
     searchIcon.forEach(function(searchIcon){
    searchIcon.addEventListener("click", () => {
     searchPage.classList.add("show-search");
+    userNavSec.style.zIndex = '1';
+      headerListSec.style.zIndex = '1';
   });
 })
 }
@@ -324,49 +326,6 @@ if (signupBtn && signupBtn.length) {
   });
 }
 
-//FOR VEDIO PLAYER
-let vedioPlayers = document.querySelectorAll(".play-vd");
-let vedio = document.querySelector(".vedio");
-let footerHm = document.querySelector(".home-footer");
-
-if (vedioPlayers && vedioPlayers.length) {
-  vedioPlayers.forEach(function (vedioPlayer) {
-    addClickTouch(vedioPlayer, function () {
-      if (vedio) vedio.style.display = "block";
-      if (header) header.style.display = "none";
-      if (main) main.style.display = "none";
-      if (footerHm) footerHm.style.display = "none";
-
-      const btn = document.getElementById("playToggle");
-      const icon = document.getElementById("playIcon");
-
-      if (btn && icon) {
-        addClickTouch(btn, () => {
-          if (icon.classList.contains("bi-play-fill")) {
-              icon.classList.replace("bi-play-fill", "bi-pause-fill");
-          } else {
-              icon.classList.replace("bi-pause-fill", "bi-play-fill");
-          }
-        });
-      }
-
-      function checkWidth() {
-          if (window.innerWidth >= 768) {
-              if (header) header.style.display = 'block';
-              if (footerHm) footerHm.style.display = "block";
-              if (hdImage) hdImage.style.display = "none";
-              if (vedio) vedio.style.marginTop = "100px";
-          } else {
-              if (footerHm) footerHm.style.display = "none";
-              if (header) header.style.display = 'none';
-          }
-      }
-
-      checkWidth();
-      window.addEventListener("resize", checkWidth);
-    });
-  });
-}
 
 //coming soon movies
 const comingNotify = document.querySelector('.coming-notify');
