@@ -1,9 +1,11 @@
-// ---- Slider / Dots ----
-let indexpage = document.querySelector(".indexpage");
-
 const sliderSection = document.querySelector(".slider-section");
 const slides = document.querySelectorAll(".slider");
 const dots = document.querySelectorAll(".dot span");
+const userNavSec = document.querySelectorAll(".user");
+const nonuserSec = document.querySelectorAll(".non-user");
+const navbarSec = document.querySelectorAll(".nav-menu");
+
+
 
 let index = 0;
 const totalSlides = slides.length;
@@ -63,8 +65,7 @@ function addClickTouch(el, handler) {
 
 // SHOW SEARCH PAGE
 const searchPage = id("searchPage");
-// use class selectors because we updated HTML to use classes for repeated icons
-const searchIconNodes = document.querySelectorAll(".searchIcon");
+const searchIcon = document.querySelectorAll(".searchIcon");
 const searchPlay = id("searchPlay");
 const searchMsg = className("search-msg")[0];
 const inputSearch = id("searchInput");
@@ -132,7 +133,6 @@ function showWatch(e) {
   if (menuClose) menuClose.classList.remove("active");
   if (mainmenu) mainmenu.classList.remove("active");
 }
-console.log(listBtn);
 
 //search icon animation (if you still use these classes elsewhere)
 const searchBtn = document.querySelector(".ti-search");
@@ -149,7 +149,6 @@ if (searchBtn) {
 //Menu Section
 const menuClose = document.querySelector(".menu-close");
 const mainmenu = document.querySelector(".mainmenu");
-// use class .menuIcon (we updated HTML)
 const hamburger = document.querySelectorAll(".menuIcon");
 
 function closeMenu() {

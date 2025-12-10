@@ -55,20 +55,19 @@ i{
   display: none;
 }
 
-/* make nav-menu a known height and higher z-index so it's always on top for clicks,
-   and ensure content is pushed down so the header/slider isn't hidden under it */
 .nav-menu {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background: var(--primary-black);
-  z-index: 1000; /* raised so icons are clickable */
+  z-index: 1; 
   display: flex;
+  z-index: 9999;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  height: 64px; /* fixed height used to offset the header below */
+  height: 64px;
 }
 
 .nav-menu a img {
@@ -90,15 +89,13 @@ i{
   -webkit-tap-highlight-color: transparent;
 }
 
-/* ensure the header/slider starts below the fixed nav so nav doesn't "take over" it */
+
 .hPhd-image {
   position: relative;
-  /* push down by nav height so the fixed nav doesn't overlap the visible top of the slider */
   margin-top: 64px;
   height: auto;
 }
 
-/* slider height increased as requested */
 .slider-section {
   display: flex;
   overflow-x: scroll;
@@ -113,7 +110,7 @@ i{
 
 .slider {
   min-width: 100%;
-  height: 450px; /* updated to 450px */
+  height: 450px; 
   position: relative;
 }
 
@@ -194,7 +191,6 @@ main {
   background-image: url(assets/Background.png);
 }
 
-/* rest of your CSS unchanged — copied exactly from your provided file */
 .mv-text {
   display: flex;
   justify-content: space-between;
@@ -1280,7 +1276,7 @@ footer {
   left: 0;
   right: 0;
   background: var(--primary-black);
-  z-index: 1;
+  z-index: 9999;
   display: flex;
   justify-content: space-between;
   align-items: center;
