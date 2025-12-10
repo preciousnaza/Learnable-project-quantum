@@ -1,8 +1,11 @@
-let indexpage = document.querySelector(".indexpage");
-
 const sliderSection = document.querySelector(".slider-section");
 const slides = document.querySelectorAll(".slider");
 const dots = document.querySelectorAll(".dot span");
+const userNavSec = document.querySelectorAll(".user");
+const nonuserSec = document.querySelectorAll(".non-user");
+const navbarSec = document.querySelectorAll(".nav-menu");
+
+
 
 let index = 0;
 const totalSlides = slides.length;
@@ -45,7 +48,7 @@ const className = (cls) => document.getElementsByClassName(cls);
 
 // SHOW SEARCH PAGE
 const searchPage = id("searchPage");
-const searchIcon = document.querySelectorAll("#searchIcon");
+const searchIcon = document.querySelectorAll(".searchIcon");
 const searchPlay = id("searchPlay");
 const searchMsg = className("search-msg")[0];
 const inputSearch = id("searchInput");
@@ -103,11 +106,9 @@ if (listBtn) {
     listPageLarge.classList.add("show-list");
     searchPage.classList.remove("show-search");
     document.body.classList.add("lock-scroll");
-
     menuClose.classList.remove("active");
     mainmenu.classList.remove("active");
   };
-console.log(listBtn)
 
 //search icon animation
 const searchBtn = document.querySelector(".ti-search");
@@ -124,7 +125,7 @@ if (searchBtn) {
 //Menu Section
 const menuClose = document.querySelector(".menu-close");
 const mainmenu = document.querySelector(".mainmenu");
-const hamburger = document.querySelectorAll("#menuIcon");
+const hamburger = document.querySelectorAll(".menuIcon");
 
 function closeMenu() {
   mainmenu.classList.remove("active");
