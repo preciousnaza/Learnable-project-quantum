@@ -621,7 +621,10 @@ form p a {
 }
 
 .menu-bottom {
-  height: 25vh;
+  position: fixed;
+  bottom: 3%;
+  width: 50%;
+  left: 25%;
   text-align: center;
   align-content: center;
   align-items: center;
@@ -635,9 +638,87 @@ form p a {
 }
 
 .menu-bottom .logo img {
-  width: 10rem;
+  width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+/* Profile Page */
+.pro-bg {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.pro-bg img{
+  width: 100%;
+  height: 170%;
+}
+
+.pro-main {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+}
+
+.pro-main .pro-header {
+  padding: 2rem 1rem 0.5rem;
+  background-color: #0a0a0a;
+}
+
+.pro-main .pro-header img {
+  position: relative;
+  width: 30%;
+  left: 35%;
+}
+
+.pro-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.pro-content .pro-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+.pro-content .pro-top img {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.pro-content .pro-bottom {
+  position: relative;
+  width: 95%;
+  left: 2.5%;
+  background-color: #0000334D;
+}
+
+.pro-content .pro-bottom .pro-width {
+  display: flex;
+  gap: 3rem;
+  text-align: left;
+}
+
+.pro-content .pro-bottom .pro-label h5 {
+  display: block;
+  padding: 0.5rem 0;
+  font-size: x-small;
+}
+
+.pro-content .pro-bottom .pro-details p {
+  display: block;
+  padding: 0.5rem 0;
+  font-size: x-small;
+  font-weight: 200;
+  color: #bbbbbb;
 }
 
 /* MOVIEDETAILS */
@@ -1447,6 +1528,56 @@ form p a{
   color: var(--light-blue);
   text-decoration: none;
 }
+
+/* Profile Page */
+.pro-bg img{
+  object-fit: cover;
+}
+
+.pro-main .pro-header {
+  padding: 1rem 0 0.3rem;
+}
+
+.pro-main .pro-header img {
+  width: 10%;
+  left: 45%;
+}
+
+.pro-content {
+  gap: 0;
+}
+
+.pro-content .pro-top {
+  gap: 1rem;
+}
+
+.pro-content .pro-top img {
+  width: 15%;
+  border-radius: 50%;
+}
+
+.pro-content .pro-bottom {
+  gap: 0.2rem;
+  padding: 0.5rem;
+}
+
+.pro-width {
+  justify-content: center;
+}
+
+.pro-content .pro-bottom .pro-label h5 {
+  display: block;
+  padding: 0.2rem 0;
+}
+
+.pro-content .pro-bottom .pro-details p {
+  display: block;
+  padding: 0.2rem 0;
+  font-size: x-small;
+  font-weight: 200;
+  color: #bbbbbb;
+}
+
 }
 
 /* footer */
