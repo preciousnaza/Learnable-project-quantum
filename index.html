@@ -4,66 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Quantum+/ Homepage</title>
+    <title>Quantum+/ newHomepage</title>
   </head>
   <body class="indexpage">
     <header class="home-hd">
+      <div class="nav-section">
       <div class="nav-menu">
           <a href="index.html"><img src="assets/Quantum-logo-white.png" alt="Logo" /></a>
         <div class="nav-icons">
-          <i class="bi bi-list" id="menuIcon"></i>
-
-          <i class="bi bi-search" id="searchIcon"></i>
+          <i class="bi bi-list menuIcon" ></i>
+          <i class="bi bi-search searchIcon"></i>
         </div>
       </div>
+
      <div class="non-user">
        <div class="header-list">
          <a href="index.html"> <img src="assets/Quantum-logo-white.png" alt="logo"></a>
         <div class="search">
           <input type="text" placeholder="search">
-          <i class="bi bi-search" id="searchIcon"></i>
+          <i class="bi bi-search searchIcon"></i>
         </div>
-        <div class="menu-sec" id="menuIcon">
-          <i class="bi bi-list" id="menuIcon"></i>
+        <div class="menu-sec">
+          <i class="bi bi-list menuIcon"></i>
           <span class="formsign-btn"><a href="#">Sign up</a></span>
           <span class="formlog-btn"><a href="#">Login</a></span>
         </div>
       </div>
      </div>
+
       <div class="user">
         <div class="header-list">
          <a href="index.html"> <img src="assets/Quantum-logo-white.png" alt="logo"></a>
         <div class="search">
-          <input type="text" placeholder="search">
-          <i class="bi bi-search" id="searchIcon"></i>
+          <input type="text" placeholder="search" />
+          <i class="bi bi-search searchIcon"></i>
         </div>
-        <div class="menu-sec" id="menuIcon">
-          <i class="bi bi-list" id="menuIcon"></i>
-          <i class="bi bi-person-circle"></i>
+        <div class="menu-sec">
+          <i class="bi bi-list menuIcon"></i>
+         <a href="profile.html"> <i class="bi bi-person-circle"></i></a>
           <span><a href="#" id="logoutBtn">Logout</a></span>
         </div>
       </div>
       </div>
-
+      </div>
       <div class="hPhd-image">
         <div class="slider-section">
           <div class="slider">
             <img src="assets/moviebox1.jpg" alt="" />
 
             <div class="header-main">
-              <h3>Captain America (2025)</h3>
+              <h3>The Running Man(2025)</h3>
               <div class="list">
                 <span>Action</span>
                 <span>sci-fi</span>
                 <span>Superhero</span>
                 <span>Epic</span>
               </div>
+              <a href="video.html?video=video1" class="header-paly">
+                <i class="bi bi-play-fill"></i>
+                <span class="play-vd">Play now</span>
+              </a>
             </div>
 
-            <div class="header-paly">
-              <i class="bi bi-play-fill"></i>
-              <span class="play-vd">Play now</span>
-            </div>
+            
           </div>
 
           <div class="slider">
@@ -77,12 +80,13 @@
                 <span>Superhero</span>
                 <span>Epic</span>
               </div>
+              
+             <a href="video.html?video=video2" class="header-paly">
+                <i class="bi bi-play-fill"></i>
+                <span class="play-vd">Play now</span>
+              </a>
             </div>
 
-            <div class="header-paly">
-              <i class="bi bi-play-fill"></i>
-              <span  class="play-vd">Play now</span>
-            </div>
           </div>
 
           <div class="slider">
@@ -96,12 +100,13 @@
                 <span>adventure</span>
                 <span>Thriller</span>
               </div>
+                <a href="video.html?video=video3" class="header-paly">
+                <i class="bi bi-play-fill"></i>
+                <span class="play-vd">Play now</span>
+              </a>
             </div>
 
-            <div class="header-paly">
-              <i class="bi bi-play-fill"></i>
-              <span  class="play-vd">Play now</span>
-            </div>
+           
           </div>
 
           <div class="slider">
@@ -114,12 +119,13 @@
                 <span>sci-fi</span>
                 <span>Horror</span>
               </div>
+              
+             <a href="video.html?video=video4" class="header-paly">
+                <i class="bi bi-play-fill"></i>
+                <span class="play-vd">Play now</span>
+              </a>
             </div>
 
-            <div class="header-paly">
-              <i class="bi bi-play-fill"></i>
-              <span  class="play-vd">Play now</span>
-            </div>
           </div>
         </div>
 
@@ -281,8 +287,8 @@
                 (2026)
               </p>
             </span>
-            <span class="span-mv coming-soon">
-              <img src="assets/rec4.jpg" alt="image" />
+            <span class="span-mv">
+              <a href="video.html?video=video2"><img src="assets/rec4.jpg" alt="image" /></a>
               <p>
                 Captain America <br />
                 (2026)
@@ -295,8 +301,8 @@
                 (2025)
               </p>
             </span>
-            <span class="span-mv coming-soon">
-              <img src="assets/rec2.jpg" alt="image" />
+            <span class="span-mv">
+              <a href="video.html?video=video4"><img src="assets/rec2.jpg" alt="image" /></a>
               <p>
                 Osiris <br />
                 (2025)
@@ -321,7 +327,7 @@
       </div>
     </main>
 
-      <!-- FOR THE SEARCH PAGE -->
+    <!-- FOR THE SEARCH PAGE -->
    <section class="search-container" id="searchPage">
       <header class="search-header">
         <div class="search-logo">
@@ -356,8 +362,6 @@
       <span class="search-msg"></span>
 
       <footer class="search-footer">
-        <div class="serach-logo">
-      <div class="search-footer">
         <div class="search-logo">
           <img src="assets/Quantum-logo-white.png" alt="Quantum logo" />
         </div>
@@ -505,7 +509,7 @@
 
         <div class="details-btn">
           <a class="watch-later-btn" href="##"><p><i class="bi bi-stopwatch"></i> Watch later</p></a>
-          <a class="play-now-btn" href="##"><p><i class="bi bi-play"></i> Play now</p></a>
+          <a class="play-now-btn" href="video.html?video=video5"><p><i class="bi bi-play"></i> Play now</p></a>
         </div>
         <div class="md-suggest">
             <div class="more">
@@ -527,7 +531,7 @@
       </div>
       <div class="form-body">
         <div class="form-image">
-          <img src="assets/Pic BKGD.png" alt="collaged image">
+          <img src="assets/Pic BKGD.png" alt="collaged image" />
         </div>
         <div class="form">
           <div class="welcome">
@@ -554,7 +558,7 @@
       </div>
       <div class="form-body">
          <div class="form-image">
-          <img src="assets/Pic BKGD.png" alt="collaged image">
+          <img src="assets/Pic BKGD.png" alt="collaged image" />
         </div>
         <div class="form">
             <div class="welcome">
@@ -575,49 +579,6 @@
      
     </section>
 
-    <!-- FOR VEDIO PLAYER -->
-     <section class="vedio">
-
-    <div class="video-wrapper">
-        <img src="assets/Video placeholder.png" class="video-image" />
-
-        <!-- Top Icons -->
-        <div class="top-icons">
-            <div class="icon-btn"><a href="index.html"><i class="bi bi-arrow-left"></i></a></div>
-
-            <div style="display: flex; gap: 10px; align-items: center;">
-             
-                <div class="icon-btn"></div>
-                <div class="icon-btn"><i class="bi bi-three-dots-vertical"></i></div>
-            </div>
-        </div>
-
-        <!-- Center Controls -->
-        <div class="center-controls">
-            <div class="side-btn"><i class="bi bi-rewind-15"></i></div>
-
-            <!-- Play Button (toggles) -->
-            <div class="play-btn" id="playToggle">
-                <i class="bi bi-play-fill" id="playIcon"></i>
-            </div>
-
-            <div class="side-btn"><i class="bi bi-fast-forward-15"></i></div>
-        </div>
-
-        <!-- Bottom details -->
-        <div class="movie-info">
-            <div class="movie-title">Captain America (2025)</div>
-            <div class="movie-type">Movie</div>
-        </div>
-
-        <div class="progress-container">
-            <div class="progress-fill"></div>
-        </div>
-
-        <div class="time-label">49:28 / 1:59:21</div>
-    </div>
-
-     </section>
 
     <footer class="home-footer">
       <div class="footer-hd">
@@ -630,7 +591,7 @@
       </div>
     </footer>
 
-<!-- Start of Watch List Page -->
+  <!-- Start of Watch List Page -->
      <section class="list-container-small" id="listPage">
       <header class="list-header">
         <div class="list-logo">
@@ -696,10 +657,10 @@
           <a href="index.html"> <img src="assets/Quantum-logo-white.png" alt="logo"></a>
         <div class="search">
           <input type="text" placeholder="search">
-          <i class="bi bi-search" id="searchIcon"></i>
+          <i class="bi bi-search searchIcon"></i>
         </div>
-        <div class="menu-sec" id="menuIcon">
-          <i class="bi bi-list" id="menuIcon"></i>
+        <div class="menu-sec">
+          <i class="bi bi-list menuIcon"></i>
           <!-- <i class="bi bi-person-circle"></i> -->
           <span class="formsign-btn"><a href="#">Sign up</a></span>
           <span class="formlog-btn"><a href="#">Login</a></span>
